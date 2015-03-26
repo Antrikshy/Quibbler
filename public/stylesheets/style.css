@@ -1,0 +1,28 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.message {
+  position: absolute;
+}
+
+.main-chat-form {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+}
+
+.message-prompt {
+  height: 30px;
+}

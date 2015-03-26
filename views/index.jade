@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    .visualizer
+    form.main-chat-form(action="")
+        input.message-prompt(type="text", autocomplete="off")
+        button(type="submit") Send
+    span.user-count= userCount
