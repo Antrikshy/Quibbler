@@ -3,7 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 
-var get = require('./routes/get.js');
+var routes = require('./routes');
 
 var app = express();
 var server = require('http').Server(app);
@@ -19,20 +19,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/*', get);
+app.get('/', routes.index);
 
 numOfUsers = 0;
 io.on('connection', function (socket) {
     numOfUsers++;
+    io.emit('user count', numOfUsers);
     console.log("User connected, total: " + numOfUsers);
 
-    io.emit('user count', numOfUsers);
-
     socket.on('new message', function (message) {
-        console.log("Message intercepted: " + message);
         var top = Math.floor(Math.random(100)*100);
         var left = Math.floor(Math.random(100)*100);
         io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left});
+        console.log("New message: " + message);
     });
 
     socket.on('disconnect', function() {

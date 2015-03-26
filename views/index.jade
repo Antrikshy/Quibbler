@@ -1,8 +1,14 @@
 extends layout
 
 block content
-    .visualizer
+  .chat-topic-container
+    span.chat-topic Test chat topic to talk about.
+
+  .visualizer
+
+  .chat-form-container
     form.main-chat-form(action="")
-        input.message-prompt(type="text", autocomplete="off")
-        button(type="submit") Send
-    span.user-count= userCount
+      input.message-prompt(type="text", autocomplete="off")
+      button.send-btn(type="submit") Send
+
+    //- span.user-count= userCount
