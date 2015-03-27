@@ -11,6 +11,7 @@ html {
 body {
   width: 100%;
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  background-color: #E7E2DC;
 }
 
 a {
@@ -33,10 +34,17 @@ span.message {
   font-size: 1.5rem;
   padding: 3vh 0;
   box-shadow: 0 0 2px 0 #000;
+  background-color: #222C38;
+  color: #FFF;
 }
 
 .visualizer {
-  height: 78vh;
+}
+
+.main-chat-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .message-prompt {
@@ -47,4 +55,6 @@ span.message {
 .send-btn {
   height: 12vh;
   width: 12vh;
+  background-color: #A4243B;
+  color: #FFF;
 }
