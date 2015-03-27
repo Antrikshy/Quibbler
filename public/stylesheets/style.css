@@ -10,7 +10,7 @@ html {
 
 body {
   width: 100%;
-  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #E7E2DC;
 }
 
@@ -28,33 +28,35 @@ span.message {
 }
 
 .chat-topic-container {
-  height: 10vh;
+  height: 2.5rem;
   width: 100%;
+  padding: 0.5rem;
   text-align: center;
-  font-size: 1.5rem;
-  padding: 3vh 0;
+  font-size: 1.2rem;
   box-shadow: 0 0 2px 0 #000;
   background-color: #222C38;
-  color: #FFF;
+  color: #E7E2DC;
 }
 
 .visualizer {
+  height: 80vh;
 }
 
 .main-chat-form {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  left: -60vw;
 }
 
 .message-prompt {
-  height: 12vh;
+  height: 3.6rem;
   width: 60vw;
+  font-size: 1.3rem;
 }
 
 .send-btn {
-  height: 12vh;
-  width: 12vh;
+  height: 3.6rem;
+  width: 3.6rem;
   background-color: #A4243B;
   color: #FFF;
 }

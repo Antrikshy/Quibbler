@@ -28,8 +28,8 @@ io.on('connection', function (socket) {
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
-        var top = Math.floor(Math.random(100)*100);
-        var left = Math.floor(Math.random(100)*100);
+        var top = getRandomInt(10, 85);
+        var left = getRandomInt(0, 90);
         io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left});
         console.log("New message: " + message);
     });
@@ -40,6 +40,10 @@ io.on('connection', function (socket) {
         console.log("User disconnected, total: " + numOfUsers);
     });
 });
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
