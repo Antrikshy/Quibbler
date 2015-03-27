@@ -2,12 +2,27 @@ extends layout
 
 block content
   .chat-topic-container
-    span.chat-topic Test chat topic to talk about
+    span.brand What is 
+    em
+      |YOUR
+    |  view on... 
+    span.chat-topic blah blah topic
+    | ?
 
   .visualizer
 
   form.pure-form.main-chat-form(action="")
     input.message-prompt(type="text", autocomplete="off")
-    button.pure-button.pure-button-primary.send-btn(type="submit") Send
+    button.pure-button.pure-button-primary.send-btn(type="submit")
+      i.fa.fa-lg.fa-send
 
-  //- span.user-count= userCount
+  .about
+    .user-count-container
+      span.user-count #{userCount}
+      |  people online right now
+    | A 
+    em 
+      a(href="http://socket.io") Socket.IO
+    |  experiment by 
+    em 
+      a(href="http://twitter.com/Antrikshy") @Antrikshy

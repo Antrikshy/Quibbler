@@ -29,8 +29,10 @@ io.on('connection', function (socket) {
 
     socket.on('new message', function (message) {
         var top = getRandomInt(10, 85);
-        var left = getRandomInt(0, 90);
-        io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left});
+        var left = getRandomInt(2, 90);
+        var fontSize = getRandomFloat(1, 2);
+        console.log(fontSize);
+        io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize});
         console.log("New message: " + message);
     });
 
@@ -43,6 +45,10 @@ io.on('connection', function (socket) {
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomFloat(min, max) {
+  return (Math.random() * (max - min) + min).toFixed(1);
 }
 
 // catch 404 and forward to error handler
