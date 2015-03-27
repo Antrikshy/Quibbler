@@ -21,37 +21,30 @@ span.message {
   position: absolute;
 }
 
+.pure-form input[type=text],
+.pure-button {
+  border-radius: 0;
+}
+
 .chat-topic-container {
-  height: 5vh;
-  width: 80%;
+  height: 10vh;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
-  padding: 1vh 0;
+  font-size: 1.5rem;
+  padding: 3vh 0;
   box-shadow: 0 0 2px 0 #000;
 }
 
 .visualizer {
-  height: 85vh;
-}
-
-.chat-form-container {
-  width: 100vw;
-  position: fix;
-  /*left: -50vmin;*/
+  height: 78vh;
 }
 
 .message-prompt {
-  width: 70vmin;
-  height: 10vh;
-  padding: 0;
-  font-size: 1.3rem;
-  border: none;
+  height: 12vh;
+  width: 60vw;
 }
 
 .send-btn {
-  height: 10vh;
-  width: 10vh;
-  margin: 0;
-  padding: 0;
-  border: none;
+  height: 12vh;
+  width: 12vh;
 }

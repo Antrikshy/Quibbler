@@ -6,9 +6,8 @@ block content
 
   .visualizer
 
-  .chat-form-container
-    form.main-chat-form(action="")
-      input.message-prompt(type="text", autocomplete="off")
-      button.send-btn(type="submit") Send
+  form.pure-form.main-chat-form(action="")
+    input.message-prompt(type="text", autocomplete="off")
+    button.pure-button.pure-button-primary.send-btn(type="submit") Send
 
-    //- span.user-count= userCount
+  //- span.user-count= userCount
