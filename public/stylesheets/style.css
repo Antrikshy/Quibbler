@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #08B2E3;
 }
@@ -30,20 +30,13 @@ span.message:hover {
 
 .chat-topic-container {
   height: 2.5rem;
-  width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
+  padding-top: 1rem;
   text-align: right;
   font-size: 1.2rem;
   box-shadow: 0 0 2px 0 #000;
   background-color: #044B7F;
   color: #FFF;
-}
-
-.chat-topic-container .fa {
-  position: absolute;
-  right: 0.4rem;
-  margin: 0.4rem;
-  font-size: 1rem;
 }
 
 .visualizer {
@@ -74,11 +67,38 @@ span.message:hover {
   background-color: #76083B;
 }
 
-.about {
+.about-container {
   position: absolute;
   text-align: right;
   right: 0;
   bottom: 0;
   padding: 0.7rem 1rem;
   color: #FFF;
+}
+
+@media (max-width: 568px) {
+  html {
+    font-size: 80%;
+  }
+
+  .send-btn {
+    visibility: hidden;
+  }
+
+  .message-prompt {
+    width: 100%;
+    position: fixed;
+    left: 0;
+  }
+
+  .about-container {
+    visibility: hidden;
+  }
+
+  .user-count-container {
+    visibility: visible;
+    position: absolute;
+    bottom: 4rem;
+    right: 1rem;
+  }
 }

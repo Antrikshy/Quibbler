@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
         var top = getRandomInt(10, 85);
         var left = getRandomInt(2, 90);
         var fontSize = getRandomFloat(1, 2);
-        console.log(fontSize);
+
         io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize});
         console.log("New message: " + message);
     });

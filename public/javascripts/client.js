@@ -21,12 +21,12 @@ $(document).ready(function() {
         
         $(".message#" + randomId).addClass('animated bounceIn');
         $(".message#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-            $(this).removeClass('animated bounceIn').delay(5000).fadeOut(4000, function () {
+            $(this).removeClass('animated bounceIn').delay(8000).fadeOut(5000, function () {
                 $(this).remove();
             });
         });
 
-        console.log("New message received: " + msgObj.msg);
+        console.log("Message sent: " + msgObj.msg);
     });
 
     socket.on('user count', function (count) {
@@ -35,24 +35,28 @@ $(document).ready(function() {
 
     // Design stuff
     var formActive = false;
+
+    if ($(window).width() < 568)
+        formActive = true;   
     
     $(".send-btn").click(function (e) {
-        if (!formActive) {
+        if (!formActive || $(".main-chat-form").position().left < 0) {
             e.preventDefault();
             
             $(".main-chat-form").animate({"left": "0"}, 'slow');
             $(".message-prompt").focus();
 
             if ($(window).width() < 860) {
-                $(".about").fadeOut('slow');
+                $(".about-container").fadeOut('slow');
             }
 
             formActive = true;
         }
 
         else {
-            if ($(".message-prompt").val() === '')
+            if ($(".message-prompt").val().length == 0 || $(".message-prompt").val().length > 50) {
                 e.preventDefault();
+            }
         }
     });
 
@@ -61,7 +65,7 @@ $(document).ready(function() {
             if (!$(e.target).closest('.main-chat-form').length) {
                 $(".message-prompt").blur();
                 $(".main-chat-form").animate({"left": "-60vw"}, 'slow');
-                $(".about").fadeIn('slow');
+                $(".about-container").fadeIn('slow');
                 
                 formActive = false;
             }

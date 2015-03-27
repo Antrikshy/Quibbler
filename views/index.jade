@@ -3,26 +3,27 @@ extends layout
 block content
   .chat-topic-container
     span.brand What is 
-    em
-      |YOUR
-    |  view on... 
+      em
+        |YOUR
+      |  view on... 
     span.chat-topic blah blah topic
     | ?
 
   .visualizer
 
   form.pure-form.main-chat-form(action="")
-    input.message-prompt(type="text", autocomplete="off")
+    input.message-prompt(type="text", placeholder="Your message (50 characters or less)", autocomplete="off")
     button.pure-button.pure-button-primary.send-btn(type="submit")
       i.fa.fa-lg.fa-send
 
-  .about
+  .about-container
     .user-count-container
       span.user-count #{userCount}
-      |  people online right now
-    | A 
-    em 
-      a(href="http://socket.io") Socket.IO
-    |  experiment by 
-    em 
-      a(href="http://twitter.com/Antrikshy") @Antrikshy
+      |  people in the conversation
+    .about
+      | A 
+      em 
+        a(href="http://socket.io") Socket.IO
+      |  experiment by 
+      em 
+        a(href="http://twitter.com/Antrikshy") @Antrikshy
