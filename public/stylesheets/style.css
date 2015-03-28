@@ -28,6 +28,10 @@ span.message:hover {
   border-radius: 0;
 }
 
+.pure-form input[type=text]:focus {
+  border-color: #ccc;
+}
+
 .chat-topic-container {
   height: 2.5rem;
   padding: 0 1rem;

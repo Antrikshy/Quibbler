@@ -2,12 +2,16 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var fs = require('fs');
+var watchr = require('watchr');
 
 var routes = require('./routes');
 
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var topicsLocation = path.resolve('lib', 'topics.json');
+var topics = require(topicsLocation);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,6 +45,25 @@ io.on('connection', function (socket) {
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
     });
+});
+
+watchr.watch({
+    path: topicsLocation,
+    listeners: {
+        error: function (err) {
+            console.log("watchr error: " + err);
+        },
+        change: function () {
+            fs.readFile(topicsLocation, 'utf8', function (err, data) {
+                if (err) console.log("fs error reading topics.json: " + err);
+                else {
+                    topics = JSON.parse(data);
+                    console.log("Topics updated.");
+                    console.log(topics);
+                }
+            });
+        }
+    }
 });
 
 function getRandomInt(min, max) {
