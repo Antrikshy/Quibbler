@@ -10,8 +10,10 @@ var routes = require('./routes');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-var topicsLocation = path.resolve('lib', 'topics.json');
-var topics = require(topicsLocation);
+
+topicsLocation = path.resolve('lib', 'topics.json');
+var topicsHandler = require(path.resolve('lib', 'topics-handler.js'));
+var topics = {};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -47,23 +49,30 @@ io.on('connection', function (socket) {
     });
 });
 
-watchr.watch({
-    path: topicsLocation,
-    listeners: {
-        error: function (err) {
-            console.log("watchr error: " + err);
+topicsHandler.firstTimeSetup(function () {
+    watchr.watch({
+        path: topicsLocation,
+        listeners: {
+            error: function (err) {
+                console.log("watchr error: " + err);
+            },
+            change: function () {
+                fs.readFile(topicsLocation, 'utf8', function (err, data) {
+                    if (err) console.log("fs error reading topics.json: " + err);
+                    else {
+                        topics = JSON.parse(data);
+                        console.log("Topics updated");
+                    }
+                });
+            }
         },
-        change: function () {
-            fs.readFile(topicsLocation, 'utf8', function (err, data) {
-                if (err) console.log("fs error reading topics.json: " + err);
-                else {
-                    topics = JSON.parse(data);
-                    console.log("Topics updated.");
-                    console.log(topics);
-                }
-            });
+        next: function (err, watcher) {
+            if (err) console.log("watchr setup error: " + err);
+            else {
+                topicsHandler.topicsScheduler();
+            }
         }
-    }
+    });
 });
 
 function getRandomInt(min, max) {

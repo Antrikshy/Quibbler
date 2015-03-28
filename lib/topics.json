@@ -1,3 +1,1034 @@
 {
-    "topic1": "Blah"
+  "0": {
+    "title": [
+      "Michigan State Basketball"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150328-Michigan+State+Basketball"
+    ],
+    "pubDate": [
+      "Sat, 28 Mar 2015 10:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t2.gstatic.com/images?q=tbn:ANd9GcQOBBpQU7dQyr7lHsVeFpBTuaEjnqmZhWoGpkOT5mw_AJaJ-8JtlcW_VgSqPi8MiUunIO4RPpA"
+    ],
+    "ht:picture_source": [
+      "MLive.com"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Travis Trice, Denzel Valentine score <b>Michigan State&#39;s</b> final 14 points in Sweet <b>...</b>"
+        ],
+        "ht:news_item_snippet": [
+          "<b>Michigan State</b> guard Travis Trice (20) drives to the basket against Oklahoma forward Khadeem Lattin (12) in the second half of their NCAA tournament Sweet 16 game at the Carrier Dome in Syracuse, N.Y., Friday, March 27, 2015. <b>Michigan State</b> won the&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.mlive.com/spartans/index.ssf/2015/03/travis_trice_denzel_valentine.html"
+        ],
+        "ht:news_item_source": [
+          "MLive.com"
+        ]
+      }
+    ]
+  },
+  "1": {
+    "title": [
+      "Amanda Knox"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Amanda+Knox"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 14:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t3.gstatic.com/images?q=tbn:ANd9GcQ70DvlbOemBa6sXFMQXI68WWqRJHgCcP2KOspChjS-ZzXB1MLHiEFP7NB2-enb2oEs-9D08T0"
+    ],
+    "ht:picture_source": [
+      "TIME"
+    ],
+    "ht:approx_traffic": [
+      "200,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Following acquittal, tearful <b>Amanda Knox</b> says she is &#39;incredibly grateful&#39;"
+        ],
+        "ht:news_item_snippet": [
+          "<b>Amanda Knox</b> said she is glad to have her life back after Italy&#39;s highest court ended her long, high-profile legal saga Friday by overturning her murder conviction. Knox, 27, and her Italian ex-boyfriend, Raffaele Sollecito, 30, are cleared in the 2007 <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.washingtonpost.com/news/morning-mix/wp/2015/03/27/italian-high-court-overturns-amanda-knox-murder-conviction/"
+        ],
+        "ht:news_item_source": [
+          "Washington Post"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Amanda Knox</b> Conviction Overturned by Italy&#39;s Top Court"
+        ],
+        "ht:news_item_snippet": [
+          "The Italian Supreme Court overturned <b>Amanda Knox&#39;s</b> conviction Friday for the 2007 murder of her roommate Meredith Kercher. Knox and her then-boyfriend Raffaele Sollecito were convicted as co-conspirators in Kercher&#39;s murder in the apartment they&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://time.com/3761938/amanda-knox-conviction-overturned/"
+        ],
+        "ht:news_item_source": [
+          "TIME"
+        ]
+      }
+    ]
+  },
+  "2": {
+    "title": [
+      "Get Hard"
+    ],
+    "description": [
+      "Get Hard Movie"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Get+Hard"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 06:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcT8Q612_KmcuDTFxjab23ELjsw8r18z4Ut_BJwnLpBvz1s3vikv5owKA1tiWdsvxNxJ6UZ_gT7C"
+    ],
+    "ht:picture_source": [
+      "Forbes"
+    ],
+    "ht:approx_traffic": [
+      "200,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Friday Box Office: Will Ferrell, Kevin Hart&#39;s &#39;<b>Get Hard</b>&#39; Nabs $12M, &#39;It <b>...</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Home wasn&#39;t the only big opener this weekend. The Will Ferrell/Kevin Hart comedy <b>Get Hard</b> scored a strong $12.91 million Friday, including $1.8m worth of Thursday previews. The $40m R-rated comedy, which earned negative reviews and would-be&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.forbes.com/sites/scottmendelson/2015/03/28/friday-box-office-get-hard-nabs-12m-it-follows-flops/"
+        ],
+        "ht:news_item_source": [
+          "Forbes"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Get Hard</b> highlights Hollywood&#39;s &#39;toxic representation&#39; of gay characters"
+        ],
+        "ht:news_item_snippet": [
+          "<b>Get Hard</b>, a comedy starring Will Ferrell and Kevin Hart and released in UK cinemas on Saturday, follows a disgraced investment banker who is headed to prison in 30 days and enlists the help of a car-washer to help him prepare. What follows is 90 <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.theguardian.com/film/2015/mar/27/get-hard-gay-homophobia-hollywood"
+        ],
+        "ht:news_item_source": [
+          "The Guardian"
+        ]
+      }
+    ]
+  },
+  "3": {
+    "title": [
+      "Wear yellow for Seth"
+    ],
+    "description": [
+      "yellow for Seth, Seth"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Wear+yellow+for+Seth"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 09:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcQsxfUv2oHQPqFQF3c_437se01AiNTYkGFXluX4uN8QE7ZIbMoxgfq3dF1OILsqEHorSndtVzc"
+    ],
+    "ht:picture_source": [
+      "Hollywood Life"
+    ],
+    "ht:approx_traffic": [
+      "200,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Seth</b> Lane, 5: Thousands Come Together To <b>Wear Yellow</b> For &#39;Bubble Boy&#39;"
+        ],
+        "ht:news_item_snippet": [
+          "Leanne Lane took to YouTube on March 11 and asked the world for the tiniest favor, to <b>wear yellow</b> on March 27 for her little boy, <b>Seth</b>. The reason? Her five-year-old boy is battling severe combined immunodeficiency disorder (SCID), also known as <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://hollywoodlife.com/2015/03/27/seth-lane-bubble-boy-wear-yellow-for-seth-video/"
+        ],
+        "ht:news_item_source": [
+          "Hollywood Life"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Wear yellow for Seth</b>!"
+        ],
+        "ht:news_item_snippet": [
+          "If you notice people around town <b>wearing yellow</b> Friday, it&#39;s all for a good cause! 5 year old <b>Seth</b> Lane has Severe Combine Immune Deficiency, sometimes called “bubble boy disease.” 20150327 <b>Wear Yellow</b>. Because of it, <b>Seth</b> has had to live in a sterile&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://wgno.com/2015/03/27/wear-yellow-for-seth/"
+        ],
+        "ht:news_item_source": [
+          "WGNO"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "title": [
+      "Gonzaga"
+    ],
+    "description": [
+      "Gonzaga Basketball, UCLA basketball"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Gonzaga"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 17:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcREGgo6YufGmqFgRX5x0h7_ZK3nCC711Nl0ufGemLsfYsPYQGAod7FV4UD-309-MfYSF6sjguc"
+    ],
+    "ht:picture_source": [
+      "New York Times"
+    ],
+    "ht:approx_traffic": [
+      "100,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Gonzaga</b> Recovers to Beat UCLA in Sloppy Game"
+        ],
+        "ht:news_item_snippet": [
+          "HOUSTON — These were not the deadeye <b>Gonzaga</b> Bulldogs who could shoot opponents into submission without getting dirty underneath the basket. These Bulldogs were clanging balls off the rim at such an alarming rate Friday night that Coach Mark Few&#39;s&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.nytimes.com/2015/03/28/sports/ncaabasketball/gonzaga-recovers-to-beat-ucla-in-sloppy-game.html"
+        ],
+        "ht:news_item_source": [
+          "New York Times"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "UCLA can&#39;t shoot way out of trouble, loses to <b>Gonzaga</b> in NCAA Sweet 16"
+        ],
+        "ht:news_item_snippet": [
+          "Forty minutes earlier, with less than a minute left in UCLA&#39;s 74-62 loss to <b>Gonzaga</b> in the first South Regional semifinal game, Coach Steve Alford took Powell out of the game, embraced him and whispered in his ear. Powell sat on the bench and thought <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.latimes.com/sports/ucla/la-sp-0328-ucla-gonzaga-ncaa-20150328-story.html"
+        ],
+        "ht:news_item_source": [
+          "Los Angeles Times"
+        ]
+      }
+    ]
+  },
+  "5": {
+    "title": [
+      "Home"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Home"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 11:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t2.gstatic.com/images?q=tbn:ANd9GcTTXMdTg5lh-Mktf1umVIMywChhdRZIIcQsAtAQfjO5rjXJQb9WAtDa5PEXr2eyZb32xmzEKuwC"
+    ],
+    "ht:picture_source": [
+      "cleveland.com"
+    ],
+    "ht:approx_traffic": [
+      "100,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Cleveland <b>Home</b> and Remodeling Expo: Here are our top picks for things to see <b>...</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Michael Homan with Sit Means Sit dog training works with Mayhem, an 11-month old chocolate Labrador, during the second annual Cleveland <b>Home</b> and Remodeling Expo on Friday, March 27, 2015 at the Cleveland Convention Center. (Lonnie Timmons III&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.cleveland.com/insideout/index.ssf/2015/03/eight_exciting_things_to_see_d.html"
+        ],
+        "ht:news_item_source": [
+          "cleveland.com"
+        ]
+      }
+    ]
+  },
+  "6": {
+    "title": [
+      "Comcast"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Comcast"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 00:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t2.gstatic.com/images?q=tbn:ANd9GcQ336KOFcezbrMJXlGqQ0wko4C1RjXwhLCS-zYLh0SJB_i_qdiYej-mNPKG4pv-SipOZK8K7daS"
+    ],
+    "ht:picture_source": [
+      "Gawker"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Man likely to sell &#39;dream house&#39; because <b>Comcast</b> won&#39;t give him internet"
+        ],
+        "ht:news_item_snippet": [
+          "If <b>Comcast</b> had been honest from the start, Seth Morabito wouldn&#39;t have purchased the house he&#39;s living in now — the same one he&#39;s about to sell. Late last year, Morabito bought a home in the rural neighborhood of Kitsap County, Washington. &quot;It met all <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.theverge.com/2015/3/27/8300593/man-selling-house-because-comcast-wont-give-him-internet"
+        ],
+        "ht:news_item_source": [
+          "The Verge"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "Man Forced to Sell His New House Because <b>Comcast</b> Lied to Him"
+        ],
+        "ht:news_item_snippet": [
+          "A software engineer living in Washington state may have no choice but to sell the home he bought last December because, despite repeatedly checking with <b>Comcast</b> before he even considered buying the property, the company just can&#39;t (or won&#39;t) give him&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://gawker.com/man-forced-to-sell-his-new-house-because-comcast-lied-t-1694018196"
+        ],
+        "ht:news_item_source": [
+          "Gawker"
+        ]
+      }
+    ]
+  },
+  "7": {
+    "title": [
+      "Aaron Hernandez"
+    ],
+    "description": [
+      "Shayanna Jenkins"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Aaron+Hernandez"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 14:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcTJ2U16BlLBTvP3cfOzwdfzk05jnvGns3fKC4W7AHC2jg0inQWPT6yz6_eMa54L31FhwfvgzDWZ"
+    ],
+    "ht:picture_source": [
+      "Boston Globe (subscription)"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Aaron Hernandez</b> fiancée says she was instructed to remove box"
+        ],
+        "ht:news_item_snippet": [
+          "(CNN) The fiancée of former New England Patriots star <b>Aaron Hernandez</b> said at a hearing Friday that she was asked to conceal a box and take it out of her Massachusetts home after the murder of Odin Lloyd in 2013. Shayanna Jenkins&#39; testimony came&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.cnn.com/2015/03/27/us/aaron-hernandez-trial/"
+        ],
+        "ht:news_item_source": [
+          "CNN"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Hernandez</b> linked to evidence removal"
+        ],
+        "ht:news_item_snippet": [
+          "FALL RIVER — The day after Odin L. Lloyd was found dead, <b>Aaron Hernandez</b> told his fiancee to remove a box from their home, the fiancee said in Bristol Superior Court Friday. Prosecutors have said they believe the box contained the murder weapon, and&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.bostonglobe.com/metro/2015/03/27/aaron-hernandez-fiancee-expected-take-stand-his-first-degree-murder-trial/EyPwGMRTtxwNZjZDoK2kWO/story.html"
+        ],
+        "ht:news_item_source": [
+          "Boston Globe (subscription)"
+        ]
+      }
+    ]
+  },
+  "8": {
+    "title": [
+      "Oklahoma Sooners vs Michigan State Spartans"
+    ],
+    "description": [
+      "Elite 8"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Oklahoma+Sooners+vs+Michigan+State+Spartans"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 18:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcQOOAOq6wTEwZ0LvXMHNUDxu6XNJ2TZTLQAvU-QjHBiZoyRlvDCl-Ba-2Ox9Kplevv98KmJqkQ"
+    ],
+    "ht:picture_source": [
+      "SI.com"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Spartans</b> knock off <b>Sooners</b> 62-58 in East semifinal"
+        ],
+        "ht:news_item_snippet": [
+          "... and the <b>Michigan State Spartans</b> are still playing. Next up, another Elite Eight. Denzel Valentine scored 13 of his 18 points in the second half and Travis Trice scored six of his 21 points in the final two minutes of a 62-58 win over the <b>Oklahoma</b> <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.si.com/game/8561146"
+        ],
+        "ht:news_item_source": [
+          "SI.com"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "Denzel Valentine&#39;s second-half surge leads <b>Spartans</b> over <b>Sooners</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Highlight Of The Night: Travis Trice scored 24 points and <b>Michigan State</b> finished off <b>Oklahoma</b> 62-58 to advance to the Elite Eight. ... The <b>Spartans</b> (26-11) have won 11 of 14 and are headed to their second consecutive regional final and fourth since 2009."
+        ],
+        "ht:news_item_url": [
+          "http://scores.espn.go.com/ncb/recap?gameId=400786506"
+        ],
+        "ht:news_item_source": [
+          "ESPN"
+        ]
+      }
+    ]
+  },
+  "9": {
+    "title": [
+      "North Carolina State Wolfpack Vs Louisville Cardinals"
+    ],
+    "description": [
+      "NC State Basketball"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-North+Carolina+State+Wolfpack+Vs+Louisville+Cardinals"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 14:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcQFiMunrffXntloVSSPLIkPBUrFX1L6sStTd_tduU74f_bUyJ1M0605Wfmh5ESEa8PdexQEPORz"
+    ],
+    "ht:picture_source": [
+      "ESPN (blog)"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Montrezl Harrell, Anton Gill guide <b>Louisville</b> past <b>NC State</b>, into Elite 8"
+        ],
+        "ht:news_item_snippet": [
+          "Harrell scored 24 points, Gill keyed a late-game surge with seven points off the bench, and <b>Louisville</b> beat <b>North Carolina State</b> 75-65 on Friday night in the East Regional semifinals of the NCAA tournament. &quot;We don&#39;t want to ... <b>Louisville</b> wasn&#39;t given <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://scores.espn.go.com/ncb/recap?gameId=400786516"
+        ],
+        "ht:news_item_source": [
+          "ESPN (blog)"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Louisville</b> beats <b>NC State</b> 75-65; on to Elite 8"
+        ],
+        "ht:news_item_snippet": [
+          "SYRACUSE, N.Y. (AP) Montrezl Harrell is not ready for the end of his college career at <b>Louisville</b> just yet. Anton Gill helped make sure it continues at least one more game. Harrell scored 24 points, Gill keyed a late-game surge with seven points off <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.si.com/game/8563531"
+        ],
+        "ht:news_item_source": [
+          "SI.com"
+        ]
+      }
+    ]
+  },
+  "10": {
+    "title": [
+      "Ellen Pao"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Ellen+Pao"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 15:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t3.gstatic.com/images?q=tbn:ANd9GcRcxbGskrA7RNFyEn0X6hyqhFY5CNHIEUvqF2eWsmqj9tuZ6S7akMa4G3l6XnJDmOD9Eu0HQUM"
+    ],
+    "ht:picture_source": [
+      "Re/code"
+    ],
+    "ht:approx_traffic": [
+      "50,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "The Real Precedent in the <b>Ellen Pao</b> Case Happened Out of Court"
+        ],
+        "ht:news_item_snippet": [
+          "“Is this the trial of the century?” asked Marketplace&#39;s Kai Ryssdal each time I went on his radio show to discuss <b>Ellen Pao&#39;s</b> gender discrimination and retaliation lawsuit against her former employer Kleiner Perkins. I wasn&#39;t sure how to answer that <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://recode.net/2015/03/28/the-real-precedent-in-the-ellen-pao-case-happened-out-of-court/"
+        ],
+        "ht:news_item_source": [
+          "Re/code"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Ellen Pao</b> Loses Big Silicon Valley Sex-Bias Case to Kleiner Perkins"
+        ],
+        "ht:news_item_snippet": [
+          "The partners of Kleiner Perkins issued a statement after the verdict, saying: “Today&#39;s verdict reaffirms that <b>Ellen Pao&#39;s</b> claims have no legal merit. We are grateful to the jury for its careful examination of the facts. There is no question gender <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://abcnews.go.com/Business/ellen-pao-loses-big-silicon-valley-sex-bias/story?id=29951020"
+        ],
+        "ht:news_item_source": [
+          "ABC News"
+        ]
+      }
+    ]
+  },
+  "11": {
+    "title": [
+      "Ultra Music Festival"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Ultra+Music+Festival"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 15:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcSBbAuBp7WvsxUmR0TNr5oWTu9lElAZb5zXCLKbBZVKLq9FlsmLNko4kPdU4T_zpIT6Fm4nQyA"
+    ],
+    "ht:picture_source": [
+      "The Miami Hurricane"
+    ],
+    "ht:approx_traffic": [
+      "20,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Fans get drenched on a rainy Day 1 of <b>Ultra Music Festival</b>"
+        ],
+        "ht:news_item_snippet": [
+          "The 19-year-old college student from North Carolina came to Bayfront Park for the <b>Ultra Music Festival</b>, which opened its gates Friday afternoon for the 17th edition of the three-day, internationally known event. Scores of revelers — wearing bright get <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.miamiherald.com/news/local/community/miami-dade/article16507613.html"
+        ],
+        "ht:news_item_source": [
+          "MiamiHerald.com"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "10 must-see DJs at <b>Ultra Music Festival</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Making the transition from trance to house <b>music</b>, this EDM legend has seen his career and musical style grow tremendously. From his performance at the 2004 Olympic Games in Athens, Greece, to headlining all the top global <b>festivals</b> including <b>Ultra</b> <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.themiamihurricane.com/2015/03/28/these-are-the-10-must-see-djs-at-ultra-music-festival/"
+        ],
+        "ht:news_item_source": [
+          "The Miami Hurricane"
+        ]
+      }
+    ]
+  },
+  "12": {
+    "title": [
+      "Harry Reid"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Harry+Reid"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 10:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcRzY4RMoWCnccPH6R6G2I8zJ6ijfQLl7c9qcS6a0alyBgM5eoiejQWLPot2Rf3JtoR11VAY49Sc"
+    ],
+    "ht:picture_source": [
+      "The Economist (blog)"
+    ],
+    "ht:approx_traffic": [
+      "20,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Harry Reid</b> and the increasingly rare Mormon Democrat"
+        ],
+        "ht:news_item_snippet": [
+          "When Sen. <b>Harry Reid</b> (D-Nev.) steps down from the Senate in early 2017, Mormonism will lose its highest-ranking elected official -- and the most high-profile example that yes, there is such a thing as a Mormon Democrat. Mormons are the most Republican&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.washingtonpost.com/blogs/the-fix/wp/2015/03/28/harry-reid-and-the-increasingly-rare-mormon-democrat/"
+        ],
+        "ht:news_item_source": [
+          "Washington Post (blog)"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Harry Reid&#39;s</b> retirement"
+        ],
+        "ht:news_item_snippet": [
+          "<b>HARRY REID</b>, the leader of the Democratic minority in the Senate, announced today that he will not seek re-election. The Nevada senator was not due to face voters again for nearly two years. Yet in the run up to the midterm elections in 2014, Americans&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.economist.com/blogs/democracyinamerica/2015/03/harry-reids-retirement"
+        ],
+        "ht:news_item_source": [
+          "The Economist (blog)"
+        ]
+      }
+    ]
+  },
+  "13": {
+    "title": [
+      "Deadpool"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Deadpool"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 13:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcSRez4eYaLyv73Kx93r9ZqkvvzyO8Lwr2kkHurwFO-mEg77MAcAlLLADIlI-WbvHFkWSlfpH82s"
+    ],
+    "ht:picture_source": [
+      "Geek"
+    ],
+    "ht:approx_traffic": [
+      "20,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Ryan Reynolds as <b>Deadpool</b> is ready for your love"
+        ],
+        "ht:news_item_snippet": [
+          "<b>Deadpool</b> has evolved as a character in the comics from brutal assassin to wise-cracking mercenary with personality issues, but he&#39;s never been that. His nickname is “Merc with a mouth,” stitching it closed was a direct assault on something that was <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.geek.com/news/ryan-reynolds-as-deadpool-is-ready-for-your-love-1619047/"
+        ],
+        "ht:news_item_source": [
+          "Geek"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "See Ryan Reynolds Lying on a Bearskin Rug in His First Picture as <b>Deadpool</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Ryan Reynolds has pushed hard for a <b>Deadpool</b> spinoff movie from the X-Men franchise, and now that he has it, he&#39;s celebrating in style. The actor spoofed Burt Reynolds in the first picture of <b>Deadpool</b> released by Fox, posing on a bearskin rug in front <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://time.com/3762287/ryan-reynolds-deadpool/"
+        ],
+        "ht:news_item_source": [
+          "TIME"
+        ]
+      }
+    ]
+  },
+  "14": {
+    "title": [
+      "Home Movie"
+    ],
+    "description": [
+      ""
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150327-Home+Movie"
+    ],
+    "pubDate": [
+      "Fri, 27 Mar 2015 13:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t2.gstatic.com/images?q=tbn:ANd9GcQycVo0bvdOWGMKbMP_OZuIxAhK_exLk-ytehI8M502qgSiUESJnqthCvHmLz76YPnjOHCe6TmC"
+    ],
+    "ht:picture_source": [
+      "Deadline.com"
+    ],
+    "ht:approx_traffic": [
+      "20,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "&#39;<b>Home</b>&#39; Review: Jim Parsons &amp; Rihanna Team For Fun Frenetic Family Ride"
+        ],
+        "ht:news_item_snippet": [
+          "Move over, E.T.: There&#39;s a new lovable alien on Earth and ironically he&#39;s in a <b>movie</b> called <b>Home</b>. This new DreamWorks Animation confection is the company&#39;s only planned release this year, and as I say in my video review above it is out-of-this-world <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://deadline.com/2015/03/home-movie-review-jim-parsons-rihanna-dreamworks-animation-1201399944/"
+        ],
+        "ht:news_item_source": [
+          "Deadline.com"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "&#39;<b>Home</b>&#39; <b>Movie</b> Review"
+        ],
+        "ht:news_item_snippet": [
+          "Your kids will likely enjoy &quot;<b>Home</b>&quot; from beginning to end. For adults, however, &quot;<b>Home</b>&quot; feels like two different <b>movies</b>. The first 45 minutes are almost intolerable: the writing isn&#39;t particularly strong, and the story isn&#39;t particularly compelling. It&#39;s <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://abcnews.go.com/Entertainment/home-movie-review/story?id=29959809"
+        ],
+        "ht:news_item_source": [
+          "ABC News"
+        ]
+      }
+    ]
+  },
+  "15": {
+    "title": [
+      "Andreas Lubitz"
+    ],
+    "description": [
+      "German plane crash, Plane Crash Alps, Airplane Crash"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150326-Andreas+Lubitz"
+    ],
+    "pubDate": [
+      "Thu, 26 Mar 2015 06:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcR6vhcJr03VSR7zhS4oZ1AptoVsoLnZ17ymqpvdUy3CoO-XX1OJ5XEepfQ1yytFvr5840M-LCg"
+    ],
+    "ht:picture_source": [
+      "Wall Street Journal"
+    ],
+    "ht:approx_traffic": [
+      "200,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Germanwings Co-Pilot <b>Andreas Lubitz</b> Concealed Depression From Airline"
+        ],
+        "ht:news_item_snippet": [
+          "BERLIN—<b>Andreas Lubitz</b>, the Germanwings co-pilot who crashed an airliner into a French mountainside, was being treated for depression, a fact he concealed from his employer, according to a person familiar with the investigation. Mr. Lubitz had been&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.wsj.com/articles/germanwings-co-pilot-andreas-lubitz-concealed-depression-from-airline-1427484790"
+        ],
+        "ht:news_item_source": [
+          "Wall Street Journal"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Andreas Lubitz</b>, Germanwings co-pilot: The tortuous trail to &#39;Why?&#39;"
+        ],
+        "ht:news_item_snippet": [
+          "The letter, Dusseldorf prosecutor Christoph Kumpa, said, was found &quot;slashed&quot; in a dust bin. The revelation only adds to the myriad questions swirling around <b>Lubitz</b>, 27, whom authorities say deliberately destroyed the plane. The biggest question of all <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.cnn.com/2015/03/27/europe/germanwings-copilot-andreas-lubitz/"
+        ],
+        "ht:news_item_source": [
+          "CNN"
+        ]
+      }
+    ]
+  },
+  "16": {
+    "title": [
+      "Germanwings"
+    ],
+    "description": [
+      "plane crash, Germanwings Crash"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150326-Germanwings"
+    ],
+    "pubDate": [
+      "Thu, 26 Mar 2015 12:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t0.gstatic.com/images?q=tbn:ANd9GcQ1eC7-TDqGfeuRqc6VbeGJWHApQSvsYTkJTwcxjFzzHBp3KsQB5ZP-DonzXGK6bGYbjcg3iRY"
+    ],
+    "ht:picture_source": [
+      "New York Times"
+    ],
+    "ht:approx_traffic": [
+      "200,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Reducing Risks After the <b>Germanwings</b> Crash"
+        ],
+        "ht:news_item_snippet": [
+          "There is a lot we still don&#39;t know about the tragic crash of the <b>Germanwings</b> plane in France. But what we do know suggests that airlines can take steps to reduce the risk of pilots deliberately or inadvertently crashing a plane. Based on recordings <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.nytimes.com/2015/03/27/opinion/reducing-risks-after-the-germanwings-crash.html"
+        ],
+        "ht:news_item_source": [
+          "New York Times"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "The <b>Germanwings</b> crash wasn&#39;t just suicide, it was mass murder"
+        ],
+        "ht:news_item_snippet": [
+          "A traffic sign warning of low flying aircraft stands near to LSC Westerwald flight club, where <b>Germanwings</b> co-pilot Andreas Lubitz had been a member, in Montabaur March 26, 2015.(Reuters/Kai Pfaffenbach)&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://qz.com/370653/suicide-or-terrorism-what-should-we-call-the-germanwings-crash/"
+        ],
+        "ht:news_item_source": [
+          "Quartz"
+        ]
+      }
+    ]
+  },
+  "17": {
+    "title": [
+      "Notre Dame Fighting Irish vs Wichita State Shockers"
+    ],
+    "description": [
+      "Notre Dame basketball, Sweet 16, Notre Dame, Kentucky Wildcats vs Notre Dame Fighting Irish"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150326-Notre+Dame+Fighting+Irish+vs+Wichita+State+Shockers"
+    ],
+    "pubDate": [
+      "Thu, 26 Mar 2015 16:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t2.gstatic.com/images?q=tbn:ANd9GcQMjBCwfPD24a24BHz4oKiMUZpq3eRqFKtqb6d_nznXwmyPnTTSBSdQOH_kZRdFzj5Wp5JN-9A"
+    ],
+    "ht:picture_source": [
+      "ESPN (blog)"
+    ],
+    "ht:approx_traffic": [
+      "100,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Notre Dame</b> races by <b>Wichita State</b> for Elite Eight spot"
+        ],
+        "ht:news_item_snippet": [
+          "CLEVELAND -- Momentum sagging and <b>Wichita State</b> surging, Mike Brey called timeout and offered his <b>Notre Dame</b> players a reminder. There was no screaming. No frantic scribbling of X&#39;s and O&#39;s. That&#39;s not Brey&#39;s style. <b>Or</b> his team&#39;s. &quot;I said, &#39;Fellas <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://scores.espn.go.com/ncb/recap?gameId=400786505"
+        ],
+        "ht:news_item_source": [
+          "ESPN (blog)"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Notre Dame Fighting Irish vs Wichita State Shockers</b> Live Stream, CBS TV <b>...</b>"
+        ],
+        "ht:news_item_snippet": [
+          "The NCAA Division I Men&#39;s Basketball enters the Sweet 16 on Thursday night, and the <b>Notre Dame Fighting Irish</b> play the <b>Wichita State Shockers</b> in the first of four games tonight. Tip-off is at 7:15 p.m. ET and can be watched online through live stream <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://www.christianpost.com/news/notre-dame-fighting-irish-vs-wichita-state-shockers-live-stream-free-tbs-tv-start-time-watch-ncaa-march-madness-2015-online-basketball-136361/"
+        ],
+        "ht:news_item_source": [
+          "Christian Post"
+        ]
+      }
+    ]
+  },
+  "18": {
+    "title": [
+      "East Village Explosion"
+    ],
+    "description": [
+      "East Village, New York, East Village Fire"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150326-East+Village+Explosion"
+    ],
+    "pubDate": [
+      "Thu, 26 Mar 2015 15:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcStmh3Fku78fEyswVFjiz4ZZBNRUhefBjpvR-o-evM3EW5xY6-xuE3UY95hShQXlRV-rjnoiYn6"
+    ],
+    "ht:picture_source": [
+      "Huffington Post"
+    ],
+    "ht:approx_traffic": [
+      "100,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "Video Shows Moment Of <b>East Village Explosion</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Security camera video has surfaced showing the powerful <b>explosion</b> that rocked an <b>East Village</b> tenement yesterday afternoon, bringing down three buildings and sparking a devastating fire. ABC 7 obtained the video from a business on East 7th Street; the&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://gothamist.com/2015/03/27/east_village_exposion_video.php"
+        ],
+        "ht:news_item_source": [
+          "Gothamist"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "Manhattan&#39;s <b>East Village</b> Smolders Morning After Building <b>Explosion</b> (PHOTOS)"
+        ],
+        "ht:news_item_snippet": [
+          "Enormous piles of rubble covered the streets of New York City&#39;s <b>East Village</b> Friday, the morning after an <b>explosion</b> and 7-alarm blaze destroyed three buildings. Two people were still unaccounted for as dogs searched through the wreckage surrounding 121&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.huffingtonpost.com/2015/03/27/east-village-explosion-morning-after-photos_n_6957420.html"
+        ],
+        "ht:news_item_source": [
+          "Huffington Post"
+        ]
+      }
+    ]
+  },
+  "19": {
+    "title": [
+      "Kentucky Wildcats vs West Virginia Mountaineers"
+    ],
+    "description": [
+      "Kentucky Vs West Virginia, West Virginia Basketball"
+    ],
+    "link": [
+      "http://www.google.com/trends/hottrends?pn=p1#a=20150326-Kentucky+Wildcats+vs+West+Virginia+Mountaineers"
+    ],
+    "pubDate": [
+      "Thu, 26 Mar 2015 13:00:00 -0700"
+    ],
+    "ht:picture": [
+      "//t1.gstatic.com/images?q=tbn:ANd9GcSWUwX8MA07C9NH8QDlzAmrZNf3dZYuKSOsE1l1W7yxVTyMEMC28f_iy3jBgrEs2LRawa2-nGLO"
+    ],
+    "ht:picture_source": [
+      "Christian Post"
+    ],
+    "ht:approx_traffic": [
+      "100,000+"
+    ],
+    "ht:news_item": [
+      {
+        "ht:news_item_title": [
+          "<b>Kentucky Wildcats vs West Virginia Mountaineers</b> Live Stream, CBS TV <b>...</b>"
+        ],
+        "ht:news_item_snippet": [
+          "Things start to heat up in the NCAA Division I Men&#39;s Basketball tournament as we enter the Sweet 16 when the <b>Kentucky Wildcats</b> play the <b>West Virginia Mountaineers</b> in the Midwest Region. The game starts at 9:45 p.m. ET and can be watched on TV on the&nbsp;..."
+        ],
+        "ht:news_item_url": [
+          "http://www.christianpost.com/news/kentucky-wildcats-vs-west-virginia-mountaineers-live-stream-free-cbs-tv-start-time-watch-ncaa-march-madness-2015-online-basketball-136360/"
+        ],
+        "ht:news_item_source": [
+          "Christian Post"
+        ]
+      },
+      {
+        "ht:news_item_title": [
+          "<b>Kentucky Wildcats vs West Virginia Mountaineers</b>: Know Your Enemy"
+        ],
+        "ht:news_item_snippet": [
+          "Perhaps no fan base holds on to their big losses like the fans of <b>Kentucky Wildcats</b> basketball do. Despite getting their revenge against Duke in a regional final in 1998, Christian Laeetner is still vilified and is public enemy number one for UK fans <b>...</b>"
+        ],
+        "ht:news_item_url": [
+          "http://wildcatbluenation.com/2015/03/26/kentucky-wildcats-vs-west-virginia-mountaineers-know-your-enemy/"
+        ],
+        "ht:news_item_source": [
+          "Wildcat Blue Nation"
+        ]
+      }
+    ]
+  }
 }
