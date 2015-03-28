@@ -31,3 +31,4 @@ node_modules
 
 # Custom
 lib/topics.json
+lib/manual-topics.json

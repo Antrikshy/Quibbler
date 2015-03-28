@@ -11,8 +11,9 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-topicsLocation = path.resolve('lib', 'topics.json');
-var topicsHandler = require(path.resolve('lib', 'topics-handler.js'));
+topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
+manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
+var topicsHandler = require(path.resolve(__dirname, 'lib', 'topics-handler.js'));
 var topics = {};
 
 // view engine setup
