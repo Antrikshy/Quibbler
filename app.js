@@ -3,9 +3,10 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-var watchr = require('watchr');
+var schedule = require('node-schedule');
 
 var routes = require('./routes');
+var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
 
 var app = express();
 var server = require('http').Server(app);
@@ -13,8 +14,11 @@ var io = require('socket.io')(server);
 
 topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
 manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
-var topicsHandler = require(path.resolve(__dirname, 'lib', 'topics-handler.js'));
-var topics = {};
+
+var currTopic = {
+    "topic": "Loading...",
+    "url": null
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -50,31 +54,20 @@ io.on('connection', function (socket) {
     });
 });
 
-topicsHandler.firstTimeSetup(function () {
-    watchr.watch({
-        path: topicsLocation,
-        listeners: {
-            error: function (err) {
-                console.log("watchr error: " + err);
-            },
-            change: function () {
-                fs.readFile(topicsLocation, 'utf8', function (err, data) {
-                    if (err) console.log("fs error reading topics.json: " + err);
-                    else {
-                        topics = JSON.parse(data);
-                        console.log("Topics updated");
-                    }
-                });
-            }
-        },
-        next: function (err, watcher) {
-            if (err) console.log("watchr setup error: " + err);
-            else {
-                topicsHandler.topicsScheduler();
-            }
-        }
-    });
+topicHandler.topicsScheduler(function () {
+    broadcastTopic(topicHandler.getNextTopic());
 });
+
+var rule = new schedule.RecurrenceRule();
+rule.minute = [0, 15, 30, 45];
+var j = schedule.scheduleJob(rule, function () {
+    broadcastTopic(topicHandler.getNextTopic());
+});
+
+function broadcastTopic(topicObj) {
+    io.emit('new topic', topicObj);
+    console.log("New topic: " + topicObj.title);
+}
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
