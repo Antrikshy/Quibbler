@@ -23,6 +23,12 @@ span.message:hover {
   background-color: #044B7F;
 }
 
+span.chat-topic,
+span.chat-topic a {
+  color: #fff;
+  text-decoration: underline; 
+}
+
 .pure-form input[type=text],
 .pure-button {
   border-radius: 0;

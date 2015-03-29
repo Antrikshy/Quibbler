@@ -15,7 +15,7 @@ var io = require('socket.io')(server);
 topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
 manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
 
-var currTopic = {
+currTopic = {
     "topic": "Loading...",
     "url": null
 };
@@ -65,8 +65,9 @@ var j = schedule.scheduleJob(rule, function () {
 });
 
 function broadcastTopic(topicObj) {
-    io.emit('new topic', topicObj);
-    console.log("New topic: " + topicObj.title);
+    currTopic = topicObj;
+    io.emit('new topic', currTopic);
+    console.log("New topic: " + currTopic.title);
 }
 
 function getRandomInt(min, max) {

@@ -33,6 +33,13 @@ $(document).ready(function() {
         $(".user-count").text(count);
     });
 
+    socket.on('new topic', function (topic) {
+        if (topic.url)
+            $("span.chat-topic").html("<span class='chat-topic'><a href='" + topic.url + "'>" + topic.title + "</a></span>");
+        else
+            $("span.chat-topic").html("<span class='chat-topic'>" + topic.title + "</span>");
+    });
+
     // Design stuff
     var formActive = false;
 

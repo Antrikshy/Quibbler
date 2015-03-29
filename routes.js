@@ -1,3 +1,3 @@
 exports.index = function(req, res) {
-  res.render('index', { userCount: numOfUsers });
+  res.render('index', { users: numOfUsers, topic: currTopic });
 };

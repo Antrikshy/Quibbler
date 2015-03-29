@@ -3,7 +3,11 @@ extends layout
 block content
   .chat-topic-container
     span.topic-label Discuss: 
-      span.chat-topic blah blah topic
+      span.chat-topic 
+        if (topic.url)
+          a(href=topic.url, target="_blank") #{topic.title}
+        else
+          | #{topic.title}
 
   .visualizer
 
@@ -14,7 +18,7 @@ block content
 
   .about-container
     .user-count-container
-      span.user-count #{userCount}
+      span.user-count #{users}
       |  people in the conversation
     .about
       | A 
