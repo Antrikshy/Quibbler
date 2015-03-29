@@ -33,18 +33,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 
 numOfUsers = 0;
+var messageColors = ["#FFFFFF", "#53545B"];
 io.on('connection', function (socket) {
     numOfUsers++;
     io.emit('user count', numOfUsers);
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
-        var top = getRandomInt(10, 85);
-        var left = getRandomInt(2, 90);
-        var fontSize = getRandomFloat(1, 2);
+        if (message.length < 50) {
+            var top = getRandomInt(10, 85);
+            var left = getRandomInt(2, 90);
+            var fontSize = (message.length < 15) ? getRandomFloat(1, 2) : getRandomFloat(0.8, 1.3);
+            var color = messageColors[getRandomInt(0, messageColors.length - 1)];
 
-        io.emit('new message', {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize});
-        console.log("New message: " + message);
+            io.emit('new message', 
+                {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize, "cssColor": color});
+            console.log("New message: " + message);
+        }
     });
 
     socket.on('disconnect', function() {
@@ -53,6 +58,8 @@ io.on('connection', function (socket) {
         console.log("User disconnected, total: " + numOfUsers);
     });
 });
+
+topicHandler.firstTimeSetup();
 
 topicHandler.topicsScheduler(function () {
     broadcastTopic(topicHandler.getNextTopic());

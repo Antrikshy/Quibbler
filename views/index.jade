@@ -1,29 +1,44 @@
 extends layout
 
 block content
+  .intro-overlay
+    .pure-g.intro-row
+      .pure-u-1.intro-column#intro-info-container
+        p.intro-welcome-to Welcome to
+        img.pure-img.intro-logo(src="http://dummyimage.com/280x80/4ed4f9/044c7f.png&text=LOGO+HERE")
+        p.intro-instructions Witness people chatting in real time. 
+          br
+          | Feel free to comment on the suggested topic or 
+          em anything 
+          | else.
+          br
+          | Topics come from Google's US trends and change every 15 minutes.
+      .pure-u-1.intro-column#deactivate-overlay-container
+        a
+          i.fa.fa-arrow-down.fa-4x.deactivate-overlay
+
   .chat-topic-container
     span.topic-label Discuss: 
       span.chat-topic 
-        if (topic.url)
-          a(href=topic.url, target="_blank") #{topic.title}
-        else
-          | #{topic.title}
+        em
+          if (topic.url)
+            a(href=topic.url, target="_blank") #{topic.title}
+          else
+            | #{topic.title}
 
   .visualizer
 
   form.pure-form.main-chat-form(action="")
     input.message-prompt(type="text", placeholder="Comment (50 characters or less)", autocomplete="off")
     button.pure-button.pure-button-primary.send-btn(type="submit")
-      i.fa.fa-lg.fa-send
+      i.fa.fa-send.fa-lg
 
-  .about-container
+  .about-container.intro-active
     .user-count-container
       span.user-count #{users}
       |  people in the conversation
     .about
       | A 
-      em 
-        a(href="http://socket.io") Socket.IO
+      a(href="http://socket.io") Socket.IO
       |  experiment by 
-      em 
-        a(href="http://twitter.com/Antrikshy") @Antrikshy
+      a(href="http://twitter.com/Antrikshy") @Antrikshy

@@ -5,11 +5,24 @@ html {
 body {
   max-width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #08B2E3;
+  color: #FFF;
+  background-color: #4ED4F9;
 }
 
 a {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #044B7F;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s; 
+}
+
+a:hover {
   color: #044B7F;
+  background-color: transparent;
 }
 
 span.message {
@@ -23,19 +36,76 @@ span.message:hover {
   background-color: #044B7F;
 }
 
-span.chat-topic,
 span.chat-topic a {
-  color: #fff;
-  text-decoration: underline; 
+  color: #044B7F;
+  background-color: #4ED4F9;
+}
+
+span.chat-topic a:hover {
+  color: #FFF;
+  background-color: transparent;
 }
 
 .pure-form input[type=text],
 .pure-button {
   border-radius: 0;
+  box-shadow: none;
 }
 
 .pure-form input[type=text]:focus {
-  border-color: #ccc;
+  border-color: #FFF;
+}
+
+.pure-img {
+  display: inline-block;
+}
+
+.intro-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #044B7F;
+  visibility: visible;
+  z-index: 5;
+}
+
+.intro-active a {
+  text-decoration: underline;
+}
+
+.intro-active a:hover {
+  color: #FFF;
+}
+
+.intro-row {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
+}
+
+.intro-row p {
+  font-size: 1.2rem;
+}
+
+p.intro-welcome-to {
+  font-size: 1.8rem;
+}
+
+.deactivate-overlay {
+  cursor: pointer;
+  margin: 1rem;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.deactivate-overlay:hover {
+  color: #4ED4F9;
 }
 
 .chat-topic-container {
@@ -58,12 +128,14 @@ span.chat-topic a {
   position: fixed;
   bottom: 0;
   left: -60vw;
+  box-shadow: 0 0 2px 0 #000;
 }
 
 .message-prompt {
   height: 3.2rem;
   width: 60vw;
   font-size: 1.3rem;
+  color: #044B7F;
 }
 
 .send-btn {
@@ -84,6 +156,23 @@ span.chat-topic a {
   bottom: 0;
   padding: 0.7rem 1rem;
   color: #FFF;
+  z-index: 6;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  .about-container {
+    visibility: hidden;
+  }
+
+  .user-count-container {
+    visibility: visible;
+    position: absolute;
+    right: 1rem;
+  }
 }
 
 @media (max-width: 568px) {
@@ -99,10 +188,6 @@ span.chat-topic a {
     width: 100%;
     position: fixed;
     left: 0;
-  }
-
-  .about-container {
-    visibility: hidden;
   }
 
   .user-count-container {

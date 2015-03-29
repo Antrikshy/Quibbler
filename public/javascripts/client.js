@@ -18,10 +18,11 @@ $(document).ready(function() {
         $(".message#" + randomId).css('top', msgObj.cssTop.toString() + "%");
         $(".message#" + randomId).css('left', msgObj.cssLeft.toString() + "%");
         $(".message#" + randomId).css('font-size', msgObj.cssFontSize.toString() + "rem");
+        $(".message#" + randomId).css('color', msgObj.cssColor);
         
         $(".message#" + randomId).addClass('animated bounceIn');
         $(".message#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-            $(this).removeClass('animated bounceIn').delay(8000).fadeOut(5000, function () {
+            $(this).removeClass('animated bounceIn').delay(3000).fadeOut(7000, function () {
                 $(this).remove();
             });
         });
@@ -35,25 +36,23 @@ $(document).ready(function() {
 
     socket.on('new topic', function (topic) {
         if (topic.url)
-            $("span.chat-topic").html("<span class='chat-topic'><a href='" + topic.url + "'>" + topic.title + "</a></span>");
+            $("span.chat-topic").html("<em><span class='chat-topic'><a href='" + topic.url + "'>" + topic.title + "</a></span></em>");
         else
-            $("span.chat-topic").html("<span class='chat-topic'>" + topic.title + "</span>");
+            $("span.chat-topic").html("<em><span class='chat-topic'>" + topic.title + "</span></em>");
     });
 
     // Design stuff
-    var formActive = false;
+    var formActive = ($(window).width() < 568) ? true : false;
+    console.log(formActive)
 
-    if ($(window).width() < 568)
-        formActive = true;   
-    
     $(".send-btn").click(function (e) {
-        if (!formActive || $(".main-chat-form").position().left < 0) {
+        if (!formActive) {
             e.preventDefault();
             
             $(".main-chat-form").animate({"left": "0"}, 'slow');
             $(".message-prompt").focus();
 
-            if ($(window).width() < 860) {
+            if ($(window).width() < 860 && $(window).width() > 568) {
                 $(".about-container").fadeOut('slow');
             }
 
@@ -68,14 +67,21 @@ $(document).ready(function() {
     });
 
     $(document).click(function (e) {
-        if (formActive) {
-            if (!$(e.target).closest('.main-chat-form').length) {
-                $(".message-prompt").blur();
-                $(".main-chat-form").animate({"left": "-60vw"}, 'slow');
-                $(".about-container").fadeIn('slow');
-                
-                formActive = false;
+        if ($(window).width() > 568) {
+            if (formActive) {
+                if (!$(e.target).closest('.main-chat-form').length) {
+                    $(".message-prompt").blur();
+                    $(".main-chat-form").animate({"left": "-60vw"}, 'slow');
+                    $(".about-container").fadeIn('slow');
+                    
+                    formActive = false;
+                }
             }
         }
+    });
+
+    $(".deactivate-overlay").click(function () {
+        $(".intro-overlay").addClass("animated slideOutUp")
+        $(".intro-active").removeClass("intro-active");
     });
 });
