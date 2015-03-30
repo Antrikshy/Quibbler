@@ -4,6 +4,7 @@ plan.target('production', [
   {
     host: '192.241.193.143',
     username: 'antrikshy',
+    privateKey: '/Users/Antriksh/.ssh/id_rsa',
     agent: process.env.SSH_AUTH_SOCK
   },
 ]);
