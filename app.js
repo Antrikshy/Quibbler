@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var schedule = require('node-schedule');
+var validator = require('validator');
 
 var routes = require('./routes');
 var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
@@ -39,7 +40,11 @@ io.on('connection', function (socket) {
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
-        if (message.length < 50) {
+        message = validator.ltrim(message, "<script>");
+        message = validator.rtrim(message, "</script>");
+        message = validator.toString(message);
+
+        if (message.length > 0 && message.length < 80) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
             var fontSize = (message.length < 15) ? getRandomFloat(1, 2) : getRandomFloat(0.8, 1.3);

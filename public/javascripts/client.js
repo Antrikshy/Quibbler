@@ -90,7 +90,7 @@ function initClient () {
         }
 
         else {
-            if ($(".message-prompt").val().length == 0 || $(".message-prompt").val().length > 50) {
+            if ($(".message-prompt").val().length == 0 || $(".message-prompt").val().length > 80) {
                 e.preventDefault();
             }
         }
