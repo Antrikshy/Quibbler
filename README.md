@@ -7,6 +7,8 @@ Quibbler is an experimental Node.js web app powered by Socket.IO where people ca
 
 It's pretty cool.
 
+**[Visit Quibbler](http://quibbler.co)**
+
 Libraries
 ---------
 
