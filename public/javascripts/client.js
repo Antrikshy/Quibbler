@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $(".main-chat-form").hide();
+    $(".github-box").hide();
 
     $(".deactivate-overlay").click(function () {
         $(".intro-overlay").addClass("animated slideOutUp")
@@ -13,6 +14,15 @@ $(document).ready(function() {
             });
         });
     });
+
+    $(".about-container").hover(
+        function () {
+            $(".github-box").css('visibility', 'visible').slideDown('fast');
+        },
+        function () {
+            $(".github-box").css('visibility', 'visible').slideUp('fast');
+        }
+    );
 });
 
 function initClient () {
@@ -59,7 +69,9 @@ function initClient () {
     });
 
     // Design stuff
-    $(".main-chat-form").show().addClass('animated fadeInRightBig');
+    $(".main-chat-form").fadeIn();
+    if ($(window).width() > 568)
+        $(".main-chat-form").addClass('animated fadeInRightBig');
 
     var formActive = ($(window).width() < 568) ? true : false;
 
