@@ -194,6 +194,10 @@ img.header-logo {
     font-size: 90%;
   }
 
+  .intro-row {
+    margin: 0 20vw;
+  }
+
   .about-container {
     visibility: hidden;
   }

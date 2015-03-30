@@ -6,14 +6,11 @@ block content
       .pure-u-1.intro-column#intro-info-container
         p.intro-welcome-to Welcome to
         img.pure-img.intro-logo(src="/images/intro-logo.png")
-        p.intro-instructions Witness people chatting in real time. 
-          br
-          | Discussion topics come from Google's US trends and change every 15 minutes.
-          br
-          | Feel free to comment on the suggested topic or 
-          em
-            span.intro-large anything 
+        p.intro-instructions Witness people conversing in real time.
+        p.intro-instructions Feel free to comment on the suggested topic or 
+          em anything 
           | else.
+        p.intro-instructions Your message will flash momentarily for everyone and disappear forever.
       .pure-u-1.intro-column#deactivate-overlay-container
         a
           i.fa.fa-arrow-down.fa-4x.deactivate-overlay
@@ -37,11 +34,15 @@ block content
       i.fa.fa-send.fa-lg
 
   .about-container.intro-active
+    .github-box
+      span.github-message View source code on 
+        a(href="http://github.com/Antrikshy/Quibbler", target="_blank") GitHub
+        | .
     .user-count-container
       span.user-count #{users}
       |  people in the conversation
     .about
       | A 
-      a(href="http://socket.io") Socket.IO
+      a(href="http://socket.io", target="_blank") Socket.IO
       |  experiment by 
-      a(href="http://twitter.com/Antrikshy") @Antrikshy
+      a(href="http://twitter.com/Antrikshy", target="_blank") @Antrikshy
