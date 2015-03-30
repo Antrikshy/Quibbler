@@ -38,7 +38,7 @@ function initClient () {
 
     socket.on('new message', function (msgObj) {
         var randomId = Math.floor(Math.random() * 10000);
-        var messageHtml = "<span class='message' id='" + randomId + "'>" + msgObj.msg + "</span>";
+        var messageHtml = "<span class='message' id='" + randomId + "'></span>";
         
         $(".visualizer").append(messageHtml);
         
@@ -46,6 +46,7 @@ function initClient () {
         $(".message#" + randomId).css('left', msgObj.cssLeft.toString() + "%");
         $(".message#" + randomId).css('font-size', msgObj.cssFontSize.toString() + "rem");
         $(".message#" + randomId).css('color', msgObj.cssColor);
+        $(".message#" + randomId).text(msgObj.msg);
         
         $(".message#" + randomId).addClass('animated bounceIn');
         $(".message#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {

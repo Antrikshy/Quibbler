@@ -40,10 +40,6 @@ io.on('connection', function (socket) {
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
-        message = validator.ltrim(message, "<script>");
-        message = validator.rtrim(message, "</script>");
-        message = validator.toString(message);
-
         if (message.length > 0 && message.length < 100) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
