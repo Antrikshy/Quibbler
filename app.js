@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 
 numOfUsers = 0;
-var messageColors = ["#FFFFFF", "#53545B"];
+var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
     numOfUsers++;
     io.emit('user count', numOfUsers);

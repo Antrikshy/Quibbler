@@ -1,42 +1,5 @@
 $(document).ready(function() {
-    // Design stuff
-    var formActive = ($(window).width() < 568) ? true : false;
-    console.log(formActive)
-
-    $(".send-btn").click(function (e) {
-        if (!formActive) {
-            e.preventDefault();
-            
-            $(".main-chat-form").animate({"left": "0"}, 'slow');
-            $(".message-prompt").focus();
-
-            if ($(window).width() < 860 && $(window).width() > 568) {
-                $(".about-container").fadeOut('slow');
-            }
-
-            formActive = true;
-        }
-
-        else {
-            if ($(".message-prompt").val().length == 0 || $(".message-prompt").val().length > 50) {
-                e.preventDefault();
-            }
-        }
-    });
-
-    $(document).click(function (e) {
-        if ($(window).width() > 568) {
-            if (formActive) {
-                if (!$(e.target).closest('.main-chat-form').length) {
-                    $(".message-prompt").blur();
-                    $(".main-chat-form").animate({"left": "-60vw"}, 'slow');
-                    $(".about-container").fadeIn('slow');
-                    
-                    formActive = false;
-                }
-            }
-        }
-    });
+    $(".main-chat-form").hide();
 
     $(".deactivate-overlay").click(function () {
         $(".intro-overlay").addClass("animated slideOutUp")
@@ -46,13 +9,13 @@ $(document).ready(function() {
         $(".message.enjoy").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             $(this).removeClass('animated bounceIn').delay(500).fadeOut(2000, function () {
                 $(this).remove();
-                initIO();
+                initClient();
             });
         });
     });
 });
 
-function initIO () {
+function initClient () {
     // Socket.IO stuff
     var socket = io();
 
@@ -93,5 +56,45 @@ function initIO () {
             $("span.chat-topic").html("<em><span class='chat-topic'><a href='" + topic.url + "'>" + topic.title + "</a></span></em>");
         else
             $("span.chat-topic").html("<em><span class='chat-topic'>" + topic.title + "</span></em>");
+    });
+
+    // Design stuff
+    $(".main-chat-form").show().addClass('animated fadeInRightBig');
+
+    var formActive = ($(window).width() < 568) ? true : false;
+
+    $(".send-btn").click(function (e) {
+        if (!formActive) {
+            e.preventDefault();
+            
+            $(".main-chat-form").animate({"left": "0"}, 'slow');
+            $(".message-prompt").focus();
+
+            if ($(window).width() < 860 && $(window).width() > 568) {
+                $(".about-container").fadeOut('slow');
+            }
+
+            formActive = true;
+        }
+
+        else {
+            if ($(".message-prompt").val().length == 0 || $(".message-prompt").val().length > 50) {
+                e.preventDefault();
+            }
+        }
+    });
+
+    $(document).click(function (e) {
+        if ($(window).width() > 568) {
+            if (formActive) {
+                if (!$(e.target).closest('.main-chat-form').length) {
+                    $(".message-prompt").blur();
+                    $(".main-chat-form").animate({"left": "-60vw"}, 'slow');
+                    $(".about-container").fadeIn('slow');
+                    
+                    formActive = false;
+                }
+            }
+        }
     });
 }

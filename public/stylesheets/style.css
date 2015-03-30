@@ -6,7 +6,7 @@ body {
   max-width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #FFF;
-  background-color: #4ED4F9;
+  background-color: #2CA4EC;
 }
 
 html, body, button, input, select, textarea,
@@ -39,11 +39,11 @@ span.message {
 
 span.chat-topic a {
   color: #044B7F;
-  background-color: #4ED4F9;
+  background-color: #FFF;
 }
 
 span.chat-topic a:hover {
-  color: #FFF;
+  color: #2CA4EC;
   background-color: transparent;
 }
 
@@ -92,7 +92,12 @@ span.chat-topic a:hover {
 }
 
 p.intro-welcome-to {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin: 1.1rem;
+}
+
+span.intro-large {
+  font-size: 1.4rem;
 }
 
 img.intro-logo {
@@ -117,7 +122,7 @@ img.header-logo {
 }
 
 .deactivate-overlay:hover {
-  color: #4ED4F9;
+  color: #2CA4EC;
 }
 
 .message.enjoy {
@@ -162,10 +167,16 @@ img.header-logo {
   width: 3.2rem;
   background-color: #044B7F;
   color: #FFF;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
 .send-btn:hover {
-  background-color: #76083B;
+  color: #044B7F;
+  background-color: #FFF;
 }
 
 .about-container {
