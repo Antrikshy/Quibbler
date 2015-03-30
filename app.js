@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var schedule = require('node-schedule');
-var validator = require('validator');
+var antiSpam = require('socket-anti-spam');
 
 var routes = require('./routes');
 var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
@@ -32,9 +32,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
 
+var antiSpam = new antiSpam({
+    spamCheckInterval: 3000,
+    spamMinusPointsPerInterval: 3,
+    spamMaxPointsBeforeKick: 21,
+    spamEnableTempBan: true,
+    spamKicksBeforeTempBan: 3,
+    spamTempBanInMinutes: 120,
+    removeKickCountAfter: 1,
+});
+
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
+    antiSpam.onConnect(socket);
+    
     numOfUsers++;
     io.emit('user count', numOfUsers);
     console.log("User connected, total: " + numOfUsers);
