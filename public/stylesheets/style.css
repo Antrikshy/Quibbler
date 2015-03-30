@@ -9,6 +9,11 @@ body {
   background-color: #4ED4F9;
 }
 
+html, body, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: 'Noto Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: #FFF;
@@ -30,10 +35,6 @@ span.message {
   text-rendering: optimizeLegibility;
   position: absolute;
   color: #FFF;
-}
-
-span.message:hover {
-  background-color: #044B7F;
 }
 
 span.chat-topic a {
@@ -94,6 +95,17 @@ p.intro-welcome-to {
   font-size: 1.8rem;
 }
 
+img.intro-logo {
+  height: 6rem;
+}
+
+img.header-logo {
+  height: 2.5rem;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+  float: left;
+}
+
 .deactivate-overlay {
   cursor: pointer;
   margin: 1rem;
@@ -106,6 +118,13 @@ p.intro-welcome-to {
 
 .deactivate-overlay:hover {
   color: #4ED4F9;
+}
+
+.message.enjoy {
+  position: absolute;
+  margin-left: 44%;
+  top: 45%;
+  font-size: 3rem;
 }
 
 .chat-topic-container {

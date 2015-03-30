@@ -5,19 +5,20 @@ block content
     .pure-g.intro-row
       .pure-u-1.intro-column#intro-info-container
         p.intro-welcome-to Welcome to
-        img.pure-img.intro-logo(src="http://dummyimage.com/280x80/4ed4f9/044c7f.png&text=LOGO+HERE")
+        img.pure-img.intro-logo(src="/images/logo.png")
         p.intro-instructions Witness people chatting in real time. 
+          br
+          | Discussion topics come from Google's US trends and change every 15 minutes.
           br
           | Feel free to comment on the suggested topic or 
           em anything 
           | else.
-          br
-          | Topics come from Google's US trends and change every 15 minutes.
       .pure-u-1.intro-column#deactivate-overlay-container
         a
           i.fa.fa-arrow-down.fa-4x.deactivate-overlay
 
   .chat-topic-container
+    img.pure-img.header-logo(src="/images/header-logo.png")
     span.topic-label Discuss: 
       span.chat-topic 
         em
@@ -27,6 +28,7 @@ block content
             | #{topic.title}
 
   .visualizer
+    span.message.enjoy Enjoy
 
   form.pure-form.main-chat-form(action="")
     input.message-prompt(type="text", placeholder="Comment (50 characters or less)", autocomplete="off")
