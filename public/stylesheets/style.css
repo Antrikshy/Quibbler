@@ -64,7 +64,7 @@ span.chat-topic a:hover {
 .intro-overlay {
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-color: #044B7F;
   visibility: visible;
   z-index: 5;
