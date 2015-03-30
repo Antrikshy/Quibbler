@@ -44,7 +44,7 @@ io.on('connection', function (socket) {
         message = validator.rtrim(message, "</script>");
         message = validator.toString(message);
 
-        if (message.length > 0 && message.length < 80) {
+        if (message.length > 0 && message.length < 100) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
             var fontSize = (message.length < 15) ? getRandomFloat(1, 2) : getRandomFloat(0.8, 1.3);
