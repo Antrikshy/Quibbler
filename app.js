@@ -42,25 +42,42 @@ var antiSpam = new antiSpam({
     removeKickCountAfter: 1,
 });
 
+// Maps from socket ID to an array of length 5, each containing a timestamp of a
+// recent message
+var recentMessages = {};
+
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
     antiSpam.onConnect(socket);
-    
+    recentMessages[socket.id] = [];
+
     numOfUsers++;
     io.emit('user count', numOfUsers);
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
+        var recent = recentMessages[socket.id];
+        if (recent.length == 10 &&
+            recent[0] > Date.now() - 10000) {
+            // Rate limited -- 10 messages in 10 seconds, no more
+            return;
+        }
+
         if (message.length > 0 && message.length < 100) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
             var fontSize = (message.length < 15) ? getRandomFloat(1, 2) : getRandomFloat(0.8, 1.3);
             var color = messageColors[getRandomInt(0, messageColors.length - 1)];
 
-            io.emit('new message', 
+            io.emit('new message',
                 {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize, "cssColor": color});
             console.log("New message: " + message);
+        }
+
+        recent.push(new Date());
+        if (recent.length > 10) {
+            recent.shift();
         }
     });
 
@@ -68,6 +85,7 @@ io.on('connection', function (socket) {
         numOfUsers--;
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
+        delete recentMessages[socket.id];
     });
 });
 
