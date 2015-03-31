@@ -57,6 +57,9 @@ io.on('connection', function (socket) {
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
+        if (typeof(message) != 'string')
+            return;
+
         var recent = recentMessages[socket.id];
         if (recent.length == 10 &&
             recent[0] > Date.now() - 10000) {
