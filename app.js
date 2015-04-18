@@ -45,14 +45,14 @@ var antiSpam = new antiSpam({
 // Maps from socket ID to an array of length 5, each containing a timestamp of a
 // recent message
 var recentMessages = {};
-var greyListTimer = {};
+var greyListStatuses = {};
 
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
     antiSpam.onConnect(socket);
     recentMessages[socket.id] = [];
-    greyListTimer[socket.id] = [];
+    greyListStatuses[socket.id] = [];
 
     numOfUsers++;
     io.emit('user count', numOfUsers);
@@ -64,10 +64,10 @@ io.on('connection', function (socket) {
 
         var recent = recentMessages[socket.id];
         if (recent.length == 10 && recent[0] > Date.now() - 10000) {
-            var greyListStatus = greyListTimer[socket.id];
+            var greyListStatus = greyListStatuses[socket.id];
             if (greyListStatus.length == 10 && greyListStatus[0] > Date.now() - 30000) {
                 console.log("Stop spamming");
-                delete greyListTimer[socket.id];
+                delete greyListStatuses[socket.id];
                 socket.disconnect();
             }
 
@@ -77,7 +77,7 @@ io.on('connection', function (socket) {
                     greyListStatus.shift();
             }
 
-            console.log(greyListTimer)
+            console.log(greyListStatuses)
             return;
         }
 
@@ -103,7 +103,7 @@ io.on('connection', function (socket) {
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
         delete recentMessages[socket.id];
-        delete greyListTimer[socket.id];
+        delete greyListStatuses[socket.id];
     });
 });
 
