@@ -42,14 +42,28 @@ var antiSpam = new antiSpam({
     removeKickCountAfter: 1,
 });
 
-// Maps from socket ID to an array of length 5, each containing a timestamp of a
-// recent message
-var recentMessages = {};
-var greyListStatuses = {};
+var recentMessages = {};    // Recent message timestamps by socket ID
+var greyListStatuses = {};  // Timestamps of too much spamming by socket ID
+var connectionsByIP = {};   // Number of connections by IP
 
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
+    // Creates new number of connections for new users
+    if (connectionsByIP[socket.request.connection.remoteAddress]) {
+        connectionsByIP[socket.request.connection.remoteAddress]++;
+
+        // If user connects 4th time with same IP, disallow
+        if (connectionsByIP[socket.request.connection.remoteAddress] > 3) {
+            connectionsByIP[socket.request.connection.remoteAddress]--;
+            socket.disconnect();
+            return;
+        }
+    }
+    // Or simply increments number of connections
+    else
+        connectionsByIP[socket.request.connection.remoteAddress] = 1;
+
     antiSpam.onConnect(socket);
     recentMessages[socket.id] = [];
     greyListStatuses[socket.id] = [];
@@ -62,6 +76,7 @@ io.on('connection', function (socket) {
         if (typeof(message) != 'string')
             return;
 
+        // Soft anti-spam measures
         var recent = recentMessages[socket.id];
         if (recent.length == 10 && recent[0] > Date.now() - 10000) {
             var greyListStatus = greyListStatuses[socket.id];
@@ -81,6 +96,7 @@ io.on('connection', function (socket) {
             return;
         }
 
+        // Message validation, randomized styling and broadcasts
         if (message.length > 0 && message.length < 100) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
@@ -98,7 +114,9 @@ io.on('connection', function (socket) {
         }
     });
 
+    // On user disconnect
     socket.on('disconnect', function() {
+        connectionsByIP[socket.request.connection.remoteAddress]--;
         numOfUsers--;
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
@@ -119,6 +137,8 @@ var j = schedule.scheduleJob(rule, function () {
     broadcastTopic(topicHandler.getNextTopic());
 });
 
+
+// Some helper functions 
 function broadcastTopic(topicObj) {
     currTopic = topicObj;
     io.emit('new topic', currTopic);
@@ -132,6 +152,7 @@ function getRandomInt(min, max) {
 function getRandomFloat(min, max) {
   return (Math.random() * (max - min) + min).toFixed(1);
 }
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
