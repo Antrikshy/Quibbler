@@ -80,7 +80,7 @@ io.on('connection', function (socket) {
 
         // Soft anti-spam measures
         var recent = recentMessages[socket.id];
-        if (recent.length == 10 && recent[0] > Date.now() - 10000) {
+        if (recent.length == 5 && recent[0] > Date.now() - 10000) {
             var greyListStatus = greyListStatuses[socket.id];
             if (greyListStatus.length == 5 && greyListStatus[0] > Date.now() - 10000) {
                 console.log("Stop spamming");
@@ -111,7 +111,7 @@ io.on('connection', function (socket) {
         }
 
         recent.push(new Date());
-        if (recent.length > 10) {
+        if (recent.length > 5) {
             recent.shift();
         }
     });
