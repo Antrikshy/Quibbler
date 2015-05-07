@@ -82,7 +82,7 @@ io.on('connection', function (socket) {
         var recent = recentMessages[socket.id];
         if (recent.length == 10 && recent[0] > Date.now() - 10000) {
             var greyListStatus = greyListStatuses[socket.id];
-            if (greyListStatus.length == 10 && greyListStatus[0] > Date.now() - 30000) {
+            if (greyListStatus.length == 5 && greyListStatus[0] > Date.now() - 10000) {
                 console.log("Stop spamming");
                 delete greyListStatuses[socket.id];
                 socket.disconnect();
