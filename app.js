@@ -49,22 +49,22 @@ var connectionsByIP = {};   // Number of connections by IP
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
-    console.log(socket.handshake.address);
+    var userIp = socket.client.request.headers['x-forwarded-for'];
 
     // Creates new number of connections for new users
-    if (connectionsByIP[socket.handshake.address]) {
-        connectionsByIP[socket.handshake.address]++;
+    if (connectionsByIP[userIp]) {
+        connectionsByIP[userIp]++;
 
         // If user connects 4th time with same IP, disallow
-        if (connectionsByIP[socket.handshake.address] > 3) {
-            connectionsByIP[socket.handshake.address]--;
+        if (connectionsByIP[userIp] > 3) {
+            connectionsByIP[userIp]--;
             socket.disconnect();
             return;
         }
     }
     // Or simply increments number of connections
     else
-        connectionsByIP[socket.handshake.address] = 1;
+        connectionsByIP[userIp] = 1;
 
     antiSpam.onConnect(socket);
     recentMessages[socket.id] = [];
@@ -118,7 +118,7 @@ io.on('connection', function (socket) {
 
     // On user disconnect
     socket.on('disconnect', function() {
-        connectionsByIP[socket.handshake.address]--;
+        connectionsByIP[userIp]--;
         numOfUsers--;
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
