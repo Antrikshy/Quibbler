@@ -90,7 +90,7 @@ io.on('connection', function (socket) {
 
             else {
                 greyListStatus.push(new Date());
-                if (greyListStatus.length > 10)
+                if (greyListStatus.length > 5)
                     greyListStatus.shift();
             }
 
