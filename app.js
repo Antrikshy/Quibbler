@@ -130,6 +130,7 @@ io.on('connection', function (socket) {
         console.log("User disconnected, total: " + numOfUsers);
         delete recentMessageTimes[socket.id];
         delete greyListStatuses[socket.id];
+        delete lastMessages[socket.id];
     });
 });
 
