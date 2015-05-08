@@ -42,9 +42,10 @@ var antiSpam = new antiSpam({
     removeKickCountAfter: 1,
 });
 
-var recentMessages = {};    // Recent message timestamps by socket ID
-var greyListStatuses = {};  // Timestamps of too much spamming by socket ID
-var connectionsByIP = {};   // Number of connections by IP
+var recentMessageTimes = {}; // Recent message timestamps by socket ID
+var lastMessages = {};       // Last message by user
+var greyListStatuses = {};   // Timestamps of too much spamming by socket ID
+var connectionsByIP = {};    // Number of connections by IP
 
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
@@ -67,7 +68,7 @@ io.on('connection', function (socket) {
         connectionsByIP[userIp] = 1;
 
     antiSpam.onConnect(socket);
-    recentMessages[socket.id] = [];
+    recentMessageTimes[socket.id] = [];
     greyListStatuses[socket.id] = [];
 
     numOfUsers++;
@@ -79,7 +80,7 @@ io.on('connection', function (socket) {
             return;
 
         // Soft anti-spam measures
-        var recent = recentMessages[socket.id];
+        var recent = recentMessageTimes[socket.id];
         if (recent.length == 5 && recent[0] > Date.now() - 5000) {
             var greyListStatus = greyListStatuses[socket.id];
             if (greyListStatus.length == 5 && greyListStatus[0] > Date.now() - 5000) {
@@ -97,6 +98,11 @@ io.on('connection', function (socket) {
             console.log(greyListStatuses)
             return;
         }
+
+        if (lastMessages[socket.id] == message)
+            return;
+        else
+            lastMessages[socket.id] = message;
 
         // Message validation, randomized styling and broadcasts
         if (message.length > 0 && message.length < 100) {
@@ -122,7 +128,7 @@ io.on('connection', function (socket) {
         numOfUsers--;
         io.emit('user count', numOfUsers);
         console.log("User disconnected, total: " + numOfUsers);
-        delete recentMessages[socket.id];
+        delete recentMessageTimes[socket.id];
         delete greyListStatuses[socket.id];
     });
 });
