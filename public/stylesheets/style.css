@@ -150,6 +150,7 @@ img.header-logo {
 
 .visualizer {
   height: 80vh;
+  padding: 10px;
   cursor: default;
 }
 
