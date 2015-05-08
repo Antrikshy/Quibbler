@@ -80,9 +80,9 @@ io.on('connection', function (socket) {
 
         // Soft anti-spam measures
         var recent = recentMessages[socket.id];
-        if (recent.length == 5 && recent[0] > Date.now() - 10000) {
+        if (recent.length == 5 && recent[0] > Date.now() - 5000) {
             var greyListStatus = greyListStatuses[socket.id];
-            if (greyListStatus.length == 5 && greyListStatus[0] > Date.now() - 10000) {
+            if (greyListStatus.length == 5 && greyListStatus[0] > Date.now() - 5000) {
                 console.log("Stop spamming");
                 delete greyListStatuses[socket.id];
                 socket.disconnect();
