@@ -42,10 +42,18 @@ span.message {
   color: #FFF;
 }
 
-span.subreddit-link {
+span.subreddit-link a {
   font-size: 80%;
   margin-top: 3px;
+  margin-left: 15px;
   float: left;
+  color: #044B7F;
+  background-color: #FFF;
+}
+
+span.subreddit-link a:hover {
+  color: #2CA4EC;
+  background-color: transparent;
 }
 
 span.chat-topic a {
