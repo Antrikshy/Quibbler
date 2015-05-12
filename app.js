@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var schedule = require('node-schedule');
 var antiSpam = require('socket-anti-spam');
+var watchr = require('watchr');
+var touch = require("touch")
 
 var routes = require('./routes');
 var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
@@ -15,6 +17,7 @@ var io = require('socket.io')(server);
 
 topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
 manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
+spamStringsLocation = path.resolve(__dirname, 'lib', 'spam-strings');
 
 currTopic = {
     "topic": "Loading...",
@@ -40,6 +43,24 @@ var antiSpam = new antiSpam({
     spamKicksBeforeTempBan: 3,
     spamTempBanInMinutes: 120,
     removeKickCountAfter: 1,
+});
+
+// Spam strings file management
+var spamStrings = [];
+touch.sync(spamStringsLocation);
+fs.readFile(spamStringsLocation, function(err, data) {
+    if (err) throw err;
+    spamStrings = data.toString().split("\n");
+});
+
+watchr.watch({
+    path: spamStringsLocation,
+    listener: function() {
+        fs.readFile(spamStringsLocation, function(err, data) {
+            if (err) throw err;
+            spamStrings = data.toString().split("\n");
+        });
+    }
 });
 
 var recentMessageTimes = {}; // Recent message timestamps by socket ID
@@ -78,6 +99,9 @@ io.on('connection', function (socket) {
     socket.on('new message', function (message) {
         if (typeof(message) != 'string')
             return;
+
+        if (spamStrings.indexOf(message) > -1)
+            socket.disconnect();
 
         // Soft anti-spam measures
         var recent = recentMessageTimes[socket.id];

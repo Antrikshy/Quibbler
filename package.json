@@ -15,7 +15,9 @@
     "node-schedule": "^0.2.6",
     "serve-favicon": "~2.1.3",
     "socket-anti-spam": "^0.1.6",
-    "socket.io": "^1.3.5"
+    "socket.io": "^1.3.5",
+    "touch": "0.0.3",
+    "watchr": "^2.4.13"
   },
   "devDependencies": {
     "flightplan": "^0.6.2"
