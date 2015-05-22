@@ -47,7 +47,7 @@ var antiSpam = new antiSpam({
 
 // Spam strings file management
 var spamStrings = [];
-touch.sync(spamStringsLocation);
+// touch.sync(spamStringsLocation);
 fs.readFile(spamStringsLocation, function(err, data) {
     if (err) throw err;
     spamStrings = data.toString().split("\n");
