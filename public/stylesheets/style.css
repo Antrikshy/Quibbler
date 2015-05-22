@@ -35,10 +35,13 @@ a:hover {
   background-color: transparent;
 }
 
-span.message {
-  font-size: 1.3rem;
+span.message-bundle {
   text-rendering: optimizeLegibility;
   position: absolute;
+}
+
+span.message {
+  font-size: 1.3rem;
   color: #FFF;
 }
 
@@ -101,9 +104,9 @@ span.chat-topic a:hover {
   text-align: center;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-60%);
-  -ms-transform: translateY(-60%);
-  transform: translateY(-60%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .intro-row p {
@@ -128,6 +131,18 @@ img.header-logo {
   margin-top: -0.5rem;
   margin-left: 0.5rem;
   float: left;
+}
+
+.usertag-box {
+  height: 2rem;
+  width: 15rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #044B7F;
+}
+
+.usertag-preview {
+  color: #044B7F;
 }
 
 .deactivate-overlay {

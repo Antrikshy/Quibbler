@@ -1,6 +1,28 @@
 $(document).ready(function() {
+    var usertag = "";
+
     $(".main-chat-form").hide();
     $(".github-box").hide();
+
+    $(".usertag-box").on("keydown", function(e) {
+        if (e.keyCode == 13) {
+            $(".deactivate-overlay").trigger("click");
+        }
+    });
+
+    $(".usertag-box").on("input", function() {
+        if ($(this).val().length > 10) {
+            $(this).val(usertag);
+            return;
+        }
+
+        usertag = $(this).val().trim().replace(/\s/g,'');
+        $(this).val(usertag);
+
+        usertag.length == 0 ? $(".usertag-preview").css("color", "#044B7F") : $(".usertag-preview").css("color", "#FFF");
+
+        $(".usertag-preview").text("[" + usertag + "]");
+    });
 
     $(".deactivate-overlay").click(function () {
         $(".intro-overlay").addClass("animated slideOutUp")
@@ -10,7 +32,7 @@ $(document).ready(function() {
         $(".message.enjoy").on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             $(this).removeClass('animated bounceIn').delay(500).fadeOut(2000, function () {
                 $(this).remove();
-                initClient();
+                initClient(usertag);
             });
         });
     });
@@ -25,9 +47,9 @@ $(document).ready(function() {
     );
 });
 
-function initClient () {
+function initClient (usertag) {
     // Socket.IO stuff
-    var socket = io();
+    var socket = io.connect('', {query: 'tag=' + usertag});
 
     $(".main-chat-form").submit(function () {
         socket.emit('new message', $(".message-prompt").val());
@@ -38,18 +60,24 @@ function initClient () {
 
     socket.on('new message', function (msgObj) {
         var randomId = Math.floor(Math.random() * 10000);
-        var messageHtml = "<span class='message' id='" + randomId + "'></span>";
+        var messageHtml = "<span class='message-bundle' id='" + randomId + "'>" +
+                            "<span class='usertag'></span><br/>" +
+                            "<span class='message'></span>"
+                          "</span>";    
         
         $(".visualizer").append(messageHtml);
         
-        $(".message#" + randomId).css('top', msgObj.cssTop.toString() + "%");
-        $(".message#" + randomId).css('left', msgObj.cssLeft.toString() + "%");
-        $(".message#" + randomId).css('font-size', msgObj.cssFontSize.toString() + "rem");
-        $(".message#" + randomId).css('color', msgObj.cssColor);
-        $(".message#" + randomId).text(msgObj.msg);
-        
-        $(".message#" + randomId).addClass('animated bounceIn');
-        $(".message#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $(".message-bundle#" + randomId).css('top', msgObj.cssTop.toString() + "%");
+        $(".message-bundle#" + randomId).css('left', msgObj.cssLeft.toString() + "%");
+        $(".message-bundle#" + randomId + " .message").css('font-size', msgObj.cssFontSize.toString() + "rem");
+        $(".message-bundle#" + randomId + " .usertag").css('font-size', (msgObj.cssFontSize * 0.6).toString() + "rem")
+        $(".message-bundle#" + randomId + " .message").css('color', msgObj.cssColor[0]);
+        $(".message-bundle#" + randomId + " .usertag").css('color', msgObj.cssColor[1]);
+        $(".message-bundle#" + randomId + " .message").text(msgObj.msg);
+        $(".message-bundle#" + randomId + " .usertag").text("[" + msgObj.usertag + "]");
+
+        $(".message-bundle#" + randomId).addClass('animated bounceIn');
+        $(".message-bundle#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             $(this).removeClass('animated bounceIn').delay(3000).fadeOut(7000, function () {
                 $(this).remove();
             });

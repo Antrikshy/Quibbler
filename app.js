@@ -67,11 +67,14 @@ var recentMessageTimes = {}; // Recent message timestamps by socket ID
 var lastMessages = {};       // Last message by user
 var greyListStatuses = {};   // Timestamps of too much spamming by socket ID
 var connectionsByIP = {};    // Number of connections by IP
+var usertags = {};           // Nicknames by socket.id
 
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
     var userIp = socket.client.request.headers['x-forwarded-for'];
+    var tag = socket.handshake.query.tag.trim().replace(/\s/g,'');
+    tag = tag.substr(0, 10);
 
     // Creates new number of connections for new users
     if (connectionsByIP[userIp]) {
@@ -87,6 +90,8 @@ io.on('connection', function (socket) {
     // Or simply increments number of connections
     else
         connectionsByIP[userIp] = 1;
+
+    usertags[socket.id] = tag;
 
     antiSpam.onConnect(socket);
     recentMessageTimes[socket.id] = [];
@@ -133,10 +138,12 @@ io.on('connection', function (socket) {
             var top = getRandomInt(10, 85);
             var left = getRandomInt(2, 90);
             var fontSize = (message.length < 25) ? getRandomFloat(1, 2) : getRandomFloat(0.8, 1.3);
-            var color = messageColors[getRandomInt(0, messageColors.length - 1)];
+            var randomColorInd = getRandomInt(0,1);
+            var color = [messageColors[randomColorInd], messageColors[(randomColorInd) ? 0 : 1]];
+            var thisUsertag = usertags[socket.id];
 
             io.emit('new message',
-                {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize, "cssColor": color});
+                {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize, "cssColor": color, "usertag": thisUsertag});
             console.log("New message: " + message);
         }
 
@@ -155,6 +162,7 @@ io.on('connection', function (socket) {
         delete recentMessageTimes[socket.id];
         delete greyListStatuses[socket.id];
         delete lastMessages[socket.id];
+        delete usertags[socket.id];
     });
 });
 
