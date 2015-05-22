@@ -74,7 +74,8 @@ function initClient (usertag) {
         $(".message-bundle#" + randomId + " .message").css('color', msgObj.cssColor[0]);
         $(".message-bundle#" + randomId + " .usertag").css('color', msgObj.cssColor[1]);
         $(".message-bundle#" + randomId + " .message").text(msgObj.msg);
-        $(".message-bundle#" + randomId + " .usertag").text("[" + msgObj.usertag + "]");
+        if (msgObj.usertag)
+            $(".message-bundle#" + randomId + " .usertag").text("[" + msgObj.usertag + "]");
 
         $(".message-bundle#" + randomId).addClass('animated bounceIn');
         $(".message-bundle#" + randomId).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
