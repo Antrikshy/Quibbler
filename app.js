@@ -73,14 +73,9 @@ numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function (socket) {
     var userIp = socket.client.request.headers['x-forwarded-for'];
-    
-    if (!socket.handshake.query.tag) {
-        socket.disconnect();
-        return;
-    }
 
     for (var id in usertags) {
-        if (usertags[id] === socket.handshake.query.tag) {
+        if (socket.handshake.query.tag.length > 0 && usertags[id] === socket.handshake.query.tag) {
             socket.disconnect();
             return;
         }
