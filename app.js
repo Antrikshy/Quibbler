@@ -123,7 +123,7 @@ io.on('connection', function (socket) {
         }
 
         for (i = 0; i < spamStrings.length; i++) {
-            if (spamCheckMessage.indexOf(spamStrings[i]) > -1) {
+            if (spamStrings[i].length && spamCheckMessage.indexOf(spamStrings[i]) > -1) {
                 socket.disconnect();
                 return;
             }
@@ -165,7 +165,7 @@ io.on('connection', function (socket) {
 
             io.emit('new message',
                 {"msg": message, "cssTop": top, "cssLeft": left, "cssFontSize": fontSize, "cssColor": color, "usertag": thisUsertag});
-            console.log("New message: " + message);
+            // console.log("New message: " + message);
         }
 
         recent.push(new Date());

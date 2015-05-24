@@ -84,7 +84,7 @@ function initClient (usertag) {
             });
         });
 
-        console.log("Message sent: " + msgObj.msg);
+        // console.log("Message sent: " + msgObj.msg);
     });
 
     socket.on('user count', function (count) {
