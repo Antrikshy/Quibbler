@@ -110,11 +110,24 @@ io.on('connection', function (socket) {
     console.log("User connected, total: " + numOfUsers);
 
     socket.on('new message', function (message) {
-        if (typeof(message) != 'string')
-            return;
-
-        if (spamStrings.indexOf(message) > -1)
+        if (typeof(message) != 'string') {
             socket.disconnect();
+            return;
+        }
+
+        var spamCheckMessage = message.toLowerCase().trim();
+
+        if (spamStrings.indexOf(spamCheckMessage) > -1) {
+            socket.disconnect();
+            return;
+        }
+
+        for (i = 0; i < spamStrings.length; i++) {
+            if (spamCheckMessage.indexOf(spamStrings[i]) > -1) {
+                socket.disconnect();
+                return;
+            }
+        }
 
         // Soft anti-spam measures
         var recent = recentMessageTimes[socket.id];
