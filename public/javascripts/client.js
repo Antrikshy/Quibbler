@@ -84,6 +84,15 @@ function initClient (usertag) {
             });
         });
 
+        $.titleAlert("Quibbles detected // Quibbler.co", {
+            requireBlur: true,
+            stopOnFocus: true,
+            stopOnMouseMove: true,
+            duration: 0,
+            interval: 500,
+            originalTitleInterval: 500
+        });
+
         // console.log("Message sent: " + msgObj.msg);
     });
 
