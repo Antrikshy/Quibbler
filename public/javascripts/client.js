@@ -56,6 +56,16 @@ $(document).ready(function() {
     notificationElement = document.createElement('audio');
     notificationElement.setAttribute('src', '/assets/notification.wav');
     notificationElement.setAttribute('autoplay', 'autoplay');
+    notificationElement.muted = false;
+
+    $("#soundVolume").click(function() {
+        notificationElement.muted = !notificationElement.muted;
+        if (notificationElement.muted) {
+            $("#soundVolume").attr("class", "fa fa-volume-off");
+        } else {
+            $("#soundVolume").attr("class", "fa fa-volume-up");
+        }
+    });
 });
 
 function initClient(usertag) {
@@ -118,8 +128,9 @@ function initClient(usertag) {
         });
 
         // console.log("Message sent: " + msgObj.msg);
-        notificationElement.play();
-        console.log("test");
+        if (notificationElement.muted == false) {
+            notificationElement.play();
+        }
     });
 
     socket.on('user count', function(count) {
