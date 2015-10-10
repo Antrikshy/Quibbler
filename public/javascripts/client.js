@@ -81,6 +81,15 @@ function initClient(usertag) {
         return false;
     });
 
+    $("#feedback").keypress(function(e) {
+        if (e.which == 13) {
+            if ($("#feedback").val() != "") {
+                socket.emit("submit feedback", $("#feedback").val());
+                $("#feedback").val("");
+            }
+        }
+    });
+
     socket.on('new message', function(msgObj) {
         var randomId = Math.floor(Math.random() * 10000);
         var messageHtml = "<span class='message-bundle' id='" +
