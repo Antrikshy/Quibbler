@@ -112,25 +112,6 @@ io.on('connection', function(socket) {
     io.emit('user count', numOfUsers);
     console.log("User connected, total: " + numOfUsers);
 
-    socket.on("submit feedback", function(message) {
-        var buffer = new Buffer(message + "<br/>");
-        fs.open("public/suggestions.html", "a", function(err,
-            fd) {
-            if (err) {
-                throw "error: " + err;
-            }
-            fs.write(fd, buffer, 0, buffer.length, null,
-                function(err) {
-                    if (err) throw err;
-                    fs.close(fd, function() {
-                        console.log(
-                            "New feedback!"
-                        );
-                    });
-                });
-        });
-    });
-
     socket.on("new message", function(message) {
         if (typeof(message) != 'string') {
             socket.disconnect();
