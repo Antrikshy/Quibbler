@@ -14,7 +14,7 @@ block content
         input.usertag-box(type="text", autocomplete="off", autocorrect="off", autofocus=true, placeholder="Pick a tag (optional)")
         br
         br
-        small (Temporary: If you pick a duplicate, you won't be able to connect. Fix coming.)
+        small (Temporary: If you pick a duplicate, you wont be able to connect. Fix coming.)
         p.usertag-preview []
       .pure-u-1.intro-column#deactivate-overlay-container
         a
@@ -31,7 +31,8 @@ block content
             a(href=topic.url, target="_blank") #{topic.title}
           else
             | #{topic.title}
-
+    a(href="#")
+      i(id="soundVolume", class="fa fa-volume-up")
   .visualizer
     span.message.enjoy Enjoy
 
