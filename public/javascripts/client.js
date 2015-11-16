@@ -55,7 +55,6 @@ $(document).ready(function() {
 
     notificationElement = document.createElement('audio');
     notificationElement.setAttribute('src', '/assets/notification.wav');
-    notificationElement.setAttribute('autoplay', 'autoplay');
     notificationElement.muted = false;
 
     $("#soundVolume").click(function() {
@@ -137,6 +136,7 @@ function initClient(usertag) {
         });
 
         // console.log("Message sent: " + msgObj.msg);
+        
         if (notificationElement.muted == false) {
             notificationElement.play();
         }

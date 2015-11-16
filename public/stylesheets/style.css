@@ -69,6 +69,14 @@ span.chat-topic a:hover {
   background-color: transparent;
 }
 
+#soundVolume {
+  margin-left: 10px;
+  text-align: center;
+  width: 50px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
 .pure-form input[type=text],
 .pure-button {
   border-radius: 0;
