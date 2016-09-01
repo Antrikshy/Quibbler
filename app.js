@@ -74,7 +74,7 @@ var usertags = {}; // Nicknames by socket.id
 numOfUsers = 0;
 var messageColors = ["#FFFFFF", "#044B7F"];
 io.on('connection', function(socket) {
-    var userIp = socket.client.request.headers['x-forwarded-for'];
+    var userIp = socket.request.connection.remoteAddress;
 
     for (var id in usertags) {
         if (socket.handshake.query.tag.length > 0 && usertags[id] ===
@@ -99,7 +99,7 @@ io.on('connection', function(socket) {
         }
     }
     // Or simply increments number of connections
-    else
+    else 
         connectionsByIP[userIp] = 1;
 
     usertags[socket.id] = tag;
