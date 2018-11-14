@@ -3,26 +3,26 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-var schedule = require('node-schedule');
+// var schedule = require('node-schedule');
 var antiSpam = require('socket-anti-spam');
 var watchr = require('watchr');
 var touch = require("touch")
 
 var routes = require('./routes');
-var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
+// var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
 
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
-manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
+// topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
+// manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
 spamStringsLocation = path.resolve(__dirname, 'lib', 'spam-strings');
 
-currTopic = {
-    "topic": "Loading...",
-    "url": null
-};
+// currTopic = {
+//     "topic": "Loading...",
+//     "url": null
+// };
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -199,25 +199,25 @@ io.on('connection', function(socket) {
     });
 });
 
-topicHandler.firstTimeSetup();
+// topicHandler.firstTimeSetup();
 
-topicHandler.topicsScheduler(function() {
-    broadcastTopic(topicHandler.getNextTopic());
-});
+// topicHandler.topicsScheduler(function() {
+//     broadcastTopic(topicHandler.getNextTopic());
+// });
 
-var rule = new schedule.RecurrenceRule();
-rule.minute = [0, 15, 30, 45];
-var j = schedule.scheduleJob(rule, function() {
-    broadcastTopic(topicHandler.getNextTopic());
-});
+// var rule = new schedule.RecurrenceRule();
+// rule.minute = [0, 15, 30, 45];
+// var j = schedule.scheduleJob(rule, function() {
+//     broadcastTopic(topicHandler.getNextTopic());
+// });
 
 
 // Some helper functions
-function broadcastTopic(topicObj) {
-    currTopic = topicObj;
-    io.emit('new topic', currTopic);
-    console.log("New topic: " + currTopic.title);
-}
+// function broadcastTopic(topicObj) {
+//     currTopic = topicObj;
+//     io.emit('new topic', currTopic);
+//     console.log("New topic: " + currTopic.title);
+// }
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -7,9 +7,6 @@ block content
         p.intro-welcome-to Welcome to
         img.pure-img.intro-logo(src="/images/intro-logo.png")
         p.intro-instructions Witness people conversing in real time.
-        p.intro-instructions Feel free to comment on the suggested topic or 
-          em anything 
-          | else.
         p.intro-instructions Your message will flash momentarily to everyone and disappear forever.
         input.usertag-box(type="text", autocomplete="off", autocorrect="off", autofocus=true, placeholder="Pick a tag (optional)")
         br
@@ -24,13 +21,6 @@ block content
     img.pure-img.header-logo(src="/images/header-logo.png")
     span.subreddit-link 
       a(href="http://www.reddit.com/r/QuibblerApp") /r/QuibblerApp
-    span.topic-label Discuss: 
-      span.chat-topic 
-        em
-          if (topic.url)
-            a(href=topic.url, target="_blank") #{topic.title}
-          else
-            | #{topic.title}
     a(href="#")
       i(id="soundVolume", class="fa fa-volume-up")
   .visualizer
