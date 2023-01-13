@@ -1,10 +1,12 @@
 doctype html
 html
   head
+    include analytics.html
+
     title Quibbler.co // live comments visualized
 
     link(href="http://fonts.googleapis.com/css?family=Noto+Sans", rel="stylesheet", type="text/css")
-    
+
     link(rel="stylesheet", href="/stylesheets/normalize.css")
     link(rel="stylesheet", href="/stylesheets/pure-min.css")
     link(rel="stylesheet", href="/stylesheets/grids-responsive-min.css")
@@ -28,7 +30,5 @@ html
     meta(property="og:url", content="http://quibbler.co")
     meta(property="og:image", content="http://quibbler.co/images/dark-logo.png")
     meta(property="og:description", content="Beautifully visualized, real-time, anonymous group chat where messages disappear forever")
-
-    include analytics
   body
     block content
