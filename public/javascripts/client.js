@@ -126,7 +126,7 @@ function initClient(usertag) {
                     });
             });
 
-        $.titleAlert("Quibbles detected // Quibbler.co", {
+        $.titleAlert("Quibbles detected", {
             requireBlur: true,
             stopOnFocus: true,
             stopOnMouseMove: true,
@@ -136,7 +136,7 @@ function initClient(usertag) {
         });
 
         // console.log("Message sent: " + msgObj.msg);
-        
+
         if (notificationElement.muted == false) {
             notificationElement.play();
         }
