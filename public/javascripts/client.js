@@ -35,7 +35,7 @@ $(document).ready(function() {
             'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
             function() {
                 $(this).removeClass('animated bounceIn').delay(
-                    500).fadeOut(2000, function() {
+                    500).fadeOut(500, function() {
                     $(this).remove();
                     initClient(usertag);
                 });

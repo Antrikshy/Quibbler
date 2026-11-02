@@ -3,17 +3,17 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-// var schedule = require('node-schedule');
-var antiSpam = require('socket-anti-spam');
-var watchr = require('watchr');
 var touch = require("touch")
 
 var routes = require('./routes');
-// var topicHandler = require(path.resolve(__dirname, 'lib', 'topic_handler.js'));
 
 var app = express();
-var server = require('http').Server(app);
+var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+
+// Fix for Express v5 compatibility - ensure proper middleware usage
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
 // manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
@@ -26,7 +26,7 @@ spamStringsLocation = path.resolve(__dirname, 'lib', 'spam-strings');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser.json());
@@ -37,31 +37,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
 
-var antiSpam = new antiSpam({
-    spamCheckInterval: 3000,
-    spamMinusPointsPerInterval: 3,
-    spamMaxPointsBeforeKick: 9,
-    spamEnableTempBan: true,
-    spamKicksBeforeTempBan: 3,
-    spamTempBanInMinutes: 120,
-    removeKickCountAfter: 1,
+var SocketAntiSpam = require('socket-anti-spam');
+var antiSpam = new SocketAntiSpam({
+    banTime: 60,
+    kickThreshold: 10,
+    kickTimesBeforeBan: 3,
+    banning: true,
+    io: io
 });
 
 // Spam strings file management
 var spamStrings = [];
 // touch.sync(spamStringsLocation);
 fs.readFile(spamStringsLocation, function(err, data) {
-    if (err) throw err;
-    spamStrings = data.toString().split("\n");
-});
-
-watchr.watch({
-    path: spamStringsLocation,
-    listener: function() {
-        fs.readFile(spamStringsLocation, function(err, data) {
-            if (err) throw err;
-            spamStrings = data.toString().split("\n");
-        });
+    if (err) {
+        console.error('Error reading spam-strings file:', err);
+        // Create an empty array if file doesn't exist or has error
+        spamStrings = [];
+    } else {
+        spamStrings = data.toString().split("\n");
     }
 });
 
@@ -99,12 +93,11 @@ io.on('connection', function(socket) {
         }
     }
     // Or simply increments number of connections
-    else 
+    else
         connectionsByIP[userIp] = 1;
 
     usertags[socket.id] = tag;
 
-    antiSpam.onConnect(socket);
     recentMessageTimes[socket.id] = [];
     greyListStatuses[socket.id] = [];
 
