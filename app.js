@@ -15,14 +15,7 @@ var io = require('socket.io')(server);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// topicsLocation = path.resolve(__dirname, 'lib', 'topics.json');
-// manualTopicsLocation = path.resolve(__dirname, 'lib', 'manual-topics.json');
 spamStringsLocation = path.resolve(__dirname, 'lib', 'spam-strings');
-
-// currTopic = {
-//     "topic": "Loading...",
-//     "url": null
-// };
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -192,26 +185,8 @@ io.on('connection', function(socket) {
     });
 });
 
-// topicHandler.firstTimeSetup();
-
-// topicHandler.topicsScheduler(function() {
-//     broadcastTopic(topicHandler.getNextTopic());
-// });
-
-// var rule = new schedule.RecurrenceRule();
-// rule.minute = [0, 15, 30, 45];
-// var j = schedule.scheduleJob(rule, function() {
-//     broadcastTopic(topicHandler.getNextTopic());
-// });
-
 
 // Some helper functions
-// function broadcastTopic(topicObj) {
-//     currTopic = topicObj;
-//     io.emit('new topic', currTopic);
-//     console.log("New topic: " + currTopic.title);
-// }
-
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -219,7 +194,6 @@ function getRandomInt(min, max) {
 function getRandomFloat(min, max) {
     return (Math.random() * (max - min) + min).toFixed(1);
 }
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

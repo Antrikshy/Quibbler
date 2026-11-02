@@ -11,7 +11,6 @@
     "express": "^5.3.0",
     "filewatcher": "^3.0.1",
     "pug": "^3.0.2",
-    "node-google-search-trends": "1.1.0",
     "node-schedule": "^2.1.2",
     "serve-favicon": "^2.5.1",
     "socket-anti-spam": "^2.0.0",
